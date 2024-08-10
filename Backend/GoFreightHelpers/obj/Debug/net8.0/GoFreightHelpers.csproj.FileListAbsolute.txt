@@ -1,0 +1,13 @@
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\bin\Debug\net8.0\GoFreightHelpers.deps.json
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\bin\Debug\net8.0\GoFreightHelpers.dll
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\bin\Debug\net8.0\GoFreightHelpers.pdb
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.GeneratedMSBuildEditorConfig.editorconfig
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.AssemblyInfoInputs.cache
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.AssemblyInfo.cs
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.csproj.CoreCompileInputs.cache
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.sourcelink.json
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.dll
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\refint\GoFreightHelpers.dll
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.pdb
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\ref\GoFreightHelpers.dll
+A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\obj\Debug\net8.0\GoFreightHelpers.csproj.AssemblyReference.cache
