@@ -34,7 +34,7 @@ const drawerWidth = 240;
 
 const navItems = [
     { text: 'Home', href: '/' },
-    { text: 'Login', href: '/login' }
+    { text: 'Login', href: '/login' },
   ]
 
 export default function MainNavigation(props: Props) {
@@ -115,7 +115,6 @@ export default function MainNavigation(props: Props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
-         
         </Typography>
       </Box>
     </Box>
