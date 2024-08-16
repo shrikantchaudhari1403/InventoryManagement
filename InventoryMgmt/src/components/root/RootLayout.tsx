@@ -33,6 +33,7 @@ export function RootLayout() {
                         {isAuthenticated && (
                             <>
                                 <li><Link to="/dashboard">Dashboard</Link></li>
+                                <li><Link to="/export">Export</Link></li>
                                 <li><Link to="/settings">Settings</Link></li>
                                 <li><button onClick={logout}>Logout</button></li>
                             </>
