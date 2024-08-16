@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import  { FC } from 'react';
 import { Grid, Paper, Avatar, TextField, Button, Typography, Link } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -10,11 +10,11 @@ const LoginFinal: FC = () => {
   const avatarStyle: React.CSSProperties = { backgroundColor: '#1bbd7e' };
   const btnstyle: React.CSSProperties = { margin: '8px 0' };
   const navigate = useNavigate();
-  
+
   const userLogin = () => {
     alert("Great Shot!");
-    window.localStorage.setItem("isAuthenticated","true");
-    navigate('/dashboard');
+    localStorage.setItem("isAuthenticated","true");
+    navigate('/');
   }
 
   return (
