@@ -1,0 +1,39 @@
+.btn-login{
+  background-color: #29AB87;
+    border-radius: 0px;
+    color: #ffff;
+    font-weight: bold;
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+    font-family: serif;
+}
+.btn-login:hover{
+    background-color: #29AB87;
+    border-radius: 2px;
+    color: black;
+    font-weight: bold;
+    height: 35px;
+    text-align: center;
+    font-size: 12px;
+    font-family: serif;
+}
+ .mrl{
+  margin-right: 5px;
+ }
+ .avatar {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+.notification{
+  margin-right: 15px;
+  width: 25px;
+  height: 30px;
+}
+.avatarName{
+  margin-right: 10px;
+  color: #A9A9A9;
+  font-size: 12px;
+  font-weight: bold;
+}
