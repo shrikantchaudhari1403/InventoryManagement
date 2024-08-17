@@ -1,0 +1,4 @@
+
+export enum SHIPMENTS {
+  GET_ALL_SHIPMENTS = 'INITIATE_CANVAS',
+}
