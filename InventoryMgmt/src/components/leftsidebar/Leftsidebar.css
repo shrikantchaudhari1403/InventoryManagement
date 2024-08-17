@@ -67,7 +67,7 @@ ul {
   left: 0;
   height: 100%;
   width: 45px;
-  background: #003153;
+  background: #1a213d;
   transition: all 0.5s ease;
 }
 
@@ -125,10 +125,12 @@ ul {
 .sidebar ul li {
   position: relative;
   height: 40px;
-  width: 100%;
+  width: 80%;
   margin: 0 5px;
   list-style: none;
   line-height: 50px;
+  padding: 5px 0px 0px 0px;
+  border-radius: 12px;
 }
 
 .sidebar ul li .tooltip {
@@ -324,7 +326,7 @@ ul {
   height: 100%;
 }
 .nav-container{
-  background-color: #003153 !important;
+  background-color: #1a213d !important;
   height: 45px !important;
 }
 .navbar-expand-lg .navbar-collapse {

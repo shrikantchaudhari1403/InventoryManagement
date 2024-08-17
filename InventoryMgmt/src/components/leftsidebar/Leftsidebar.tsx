@@ -17,28 +17,29 @@ function Leftsidebar(props:any){
             click
           </div> */}
           <ul className="nav_list">
+          <li className={pathname == '/home' ? 'active' :""}>
+              <Link to="/home">
+              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/home.svg'} />
+              </Link>
+
+              </li>
             <li className={pathname == '/dashboard' ? 'active' :""}>
             <Link to={'/dashboard'} >
             <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/home.svg'} />
              </Link>
             </li>
-            <li>
-            <Link to={'/dashboard'} >
+            <li className={pathname == '/negative-shipment' ? 'active' :""}>
+            <Link to={'/negative-shipment'} >
               <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/calender.svg'} />
               </Link>
               </li>
 
-            <li>
-            <Link to={'/dashboard'} >
+            <li className={pathname == '/settings' ? 'active' :""}>
+            <Link to={'/settings'} >
             <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/setting.svg'} />
             </Link>
               </li>
-            <li>
-              <Link to="">
-              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/home.svg'} />
-              </Link>
 
-              </li>
             <li>
             <Link to="">
               <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/calender.svg'} />
