@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace GoFreightShipmentAPI.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+   // [Authorize]
     [ApiController]
     public class GoFrightShipmentController : ControllerBase
     {
@@ -18,7 +18,7 @@ namespace GoFreightShipmentAPI.Controllers
             _baseService = baseService;
         }
 
-        [Authorize]
+     //   [Authorize]
         [HttpGet("/GetAllNegativeShipmentData")]
         public async Task<IActionResult> GetAllNegativeShipmentData() {
             
@@ -34,7 +34,7 @@ namespace GoFreightShipmentAPI.Controllers
             return Ok(result);
         }
 
-        [Authorize]
+      //  [Authorize]
         [HttpDelete]
         public async Task<IActionResult> DeleteNegativeShipmentData(string id)
         {

@@ -34,9 +34,9 @@ namespace GoFreightRepository.Repository.ConcreteClass
             NegativeProfitShipment data = _goFreightDBContext.NegativeProfitShipments.Where(x => x.Id == id).FirstOrDefault();
 
             if (data != null) {
-                _goFreightDBContext.NegativeProfitShipments.Attach(data);
+               // _goFreightDBContext.NegativeProfitShipments.Attach(data);
                 _goFreightDBContext.NegativeProfitShipments.Remove(data);
-                _goFreightDBContext.NegativeProfitShipments.Attach(data);
+               // _goFreightDBContext.NegativeProfitShipments.Attach(data);
                 _goFreightDBContext.SaveChanges();
             }
             return Task.FromResult(true);

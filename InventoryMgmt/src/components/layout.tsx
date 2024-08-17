@@ -10,7 +10,6 @@ const Layout = () => {
   const [modalIsOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
-    console.log("tests---", localStorage.getItem("isAuthenticated"))
     if (localStorage.getItem("isAuthenticated") == "true") {
       setIsLogedIn(true)
     }
@@ -49,12 +48,6 @@ const Layout = () => {
 
     },
   };
-  let subtitle: any
-
-
-  function openModal() {
-    setIsOpen(true);
-  }
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.

@@ -65,9 +65,9 @@ namespace Services.ConcreteClass
               //  ModifiedDate = model.ModifiedDate,
                 Profit = model.Profit
             };
-            var shipments = _repo.ProfitShipment.UpdateNegativeShipmentData(dataRequest);
+            var shipments = _repo.ProfitShipment.UpdateNegativeShipmentData(dataRequest).ToList();
 
-            shipments.ForEachAsync((x) =>
+            shipments.ForEach((x) =>
             {
                 dtos.Add(new NegativeProfitShipmentDTO
                 {
