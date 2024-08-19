@@ -25,7 +25,7 @@ function Leftsidebar(props:any){
               </li>
             <li className={pathname == '/dashboard' ? 'active' :""}>
             <Link to={'/dashboard'} >
-            <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/home.svg'} />
+            <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/stats.svg'} />
              </Link>
             </li>
             <li className={pathname == '/negative-shipment' ? 'active' :""}>
@@ -42,6 +42,18 @@ function Leftsidebar(props:any){
 
             <li>
             <Link to="">
+              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/stats.svg'} />
+              </Link></li>
+            <li>
+            <Link to="">
+              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/setting.svg'} />
+              </Link></li>
+            <li>
+            <Link to="">
+              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/stats.svg'} />
+              </Link></li>
+            <li>
+            <Link to="">
               <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/calender.svg'} />
               </Link></li>
             <li>
@@ -50,19 +62,7 @@ function Leftsidebar(props:any){
               </Link></li>
             <li>
             <Link to="">
-              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/home.svg'} />
-              </Link></li>
-            <li>
-            <Link to="">
-              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/calender.svg'} />
-              </Link></li>
-            <li>
-            <Link to="">
-              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/setting.svg'} />
-              </Link></li>
-            <li>
-            <Link to="">
-              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/home.svg'} />
+              <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/stats.svg'} />
               </Link></li>
             <li>
             <Link to="">

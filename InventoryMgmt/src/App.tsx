@@ -11,7 +11,7 @@ function App(props: any) {
     <>
     <Provider store={store}>
       <div>
-        <div className='container'>
+        <div className='containers'>
           <RouterProvider router={router} ></RouterProvider>
         </div>
       </div>
