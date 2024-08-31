@@ -7,19 +7,21 @@ import './filterabletable.css'
 import { useEffect, useState } from "react"
 import { NativeShipmentDispatcher } from "../../redux/actions/nativeShipments/nativeShipments"
 import Modal from 'react-modal';
+import { IShipment } from '../../redux/interfaces/INativeShipments'
 
 
 function NegativeShipment() {
-  const localData = useSelector((state: any) => state)
+  const localData = useSelector((state: any) => state.NativeShipments)
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [rowData, setRowData] = useState()
+  const [rowData, setRowData] = useState<IShipment>({});
+  const [formData, setFormData]= useState<IShipment>({});
   const [isEdit, setIsEdit] = useState(false)
   const [department, setDepartment] = useState()
   const [fileNo, setFileNo] = useState()
   const [profit, setProfit] = useState()
+  const [rowId, setRowId] = useState()
   const dispatch = useDispatch()
   const PanelsDispatch = new NativeShipmentDispatcher(dispatch)
-
   const customStyles = {
     content: {
       top: '50%',
@@ -34,28 +36,31 @@ function NegativeShipment() {
   };
 
   useEffect(() => {
-
-    //PanelsDispatch.getAllNativeShipments([])
-
+    PanelsDispatch.getAllNativeShipmentsData();
   }, [])
 
   const editRow = (rowData: any) => {
     setDepartment(rowData.record.mawbNo)
-
-    setFileNo(rowData.record.fileNo)
-    setProfit(rowData.record.profit)
+    setFileNo(rowData.record.fileNo);
+    setProfit(rowData.record.profit);
+    setRowId(rowData.record.id);
     setIsEdit(true)
-    //setRowData(rowData.record)
+    
+    setFormData(values => ({...values,["mawbNo"]: rowData.record.mawbNo}));
+    setFormData(values => ({...values,["fileNo"]: rowData.record.fileNo}))
+    setFormData(values => ({...values,["profit"]: rowData.record.profit}))
+    setFormData(values => ({...values,["id"]: rowData.record.id}))
+    
+    //const value = event.target.value;
+   // setForData(values => ({...values, [name]: value}))
+    //setFormData(rowData => ({...rowData}));
   }
-  const updateRow = () => {
-    const data = {
-      profit: profit,
-      fileNo: fileNo,
-      department: department
-    }
-    // add api integration for edit records
-    console.log("dkkd", data)
 
+   const updateRow = (e:any) => {
+    e.preventDefault();
+    console.log("dkkd", formData)
+    PanelsDispatch.updateNativeShipmentsData(formData);
+    setIsEdit(false);
   }
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
@@ -65,14 +70,33 @@ function NegativeShipment() {
   function closeModal() {
     setIsOpen(false);
   }
+  
+  const handleChange = (event: any) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setFormData(values => ({...values, [name]: value}))
+  }
+
+  function deleteRecord(rowData:any) {
+    setIsOpen(true)
+    setRowId(rowData.record.id);
+    //setIsOpen(false); id
+  }
+
+  function confirmDelete(e:any){
+    e.preventDefault();
+    setIsOpen(false);
+    PanelsDispatch.deleteNativeShipmentRecord(rowId);
+  }
+
   const fields = [
-    { name: 'mawbNo', displayName: "Department", inputFilterable: false, exactFilterable: false, sortable: true },
-    { name: 'mawbNo', displayName: "File No", inputFilterable: false, exactFilterable: false, sortable: true },
-    { name: 'mawbNo', displayName: "ETD", inputFilterable: false, exactFilterable: false, sortable: true },
-    { name: 'mawbNo', displayName: "ETA", inputFilterable: false, exactFilterable: false, sortable: true },
-    { name: 'createdBy', displayName: "Created By", inputFilterable: false, sortable: true },
-    { name: 'profit', displayName: "Profit", inputFilterable: false, exactFilterable: false, sortable: true },
-    { name: 'mawbNo', displayName: "No", inputFilterable: false, exactFilterable: false, sortable: true },
+    { id:'id',name: 'mawbNo', displayName: "MAWB Number", inputFilterable: false, exactFilterable: false, sortable: true },
+    { id:'id',name: 'fileNo', displayName: "File No", inputFilterable: false, exactFilterable: false, sortable: true },
+    // { id:'id',name: 'mawbNo', displayName: "ETD", inputFilterable: false, exactFilterable: false, sortable: true },
+    // { id:'id',name: 'mawbNo', displayName: "ETA", inputFilterable: false, exactFilterable: false, sortable: true },
+    { id:'id',name: 'createdBy', displayName: "Created By", inputFilterable: false, sortable: true },
+    { id:'id',name: 'profit', displayName: "Profit", inputFilterable: false, exactFilterable: false, sortable: true },
+    // { id:'id',name: 'mawbNo', displayName: "No", inputFilterable: false, exactFilterable: false, sortable: true },
     {
       name: '', displayName: "Action", inputFilterable: false, exactFilterable: false, sortable: false,
 
@@ -85,7 +109,7 @@ function NegativeShipment() {
               <img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/edit.svg'} /></span>
             <span
             onClick={()=>{
-              setIsOpen(true)
+              deleteRecord(rowData)
             }}
             ><img style={{ height: '20px', width: '30px', cursor: 'pointer' }} src={'../src/assets/trash.svg'} /></span>
           </div>
@@ -108,12 +132,10 @@ function NegativeShipment() {
         >
 
           <form style={{ textAlign: 'center' }}>
-
-
             <div className=''>
               <div className=''>
                 <h3>Are you sure you want delete this record?</h3>
-                <button className="btn-login" >Yes</button>
+                <button className="btn-login" onClick={()=>{confirmDelete(event)}}>Yes</button>
                 <button className="btn-login" style={{ marginLeft: '10px', backgroundColor: '#1a213d' }} onClick={()=>{closeModal()}}>No</button>
               </div>
 
@@ -138,7 +160,7 @@ function NegativeShipment() {
           <FilterableTable
             namespace="People"
             initialSort="name"
-            data={localData.NativeShipments.data}
+            data={localData.data}
             fields={fields}
             noRecordsMessage="There are no people to display"
             noFilteredRecordsMessage="No people match your filters!"
@@ -153,22 +175,16 @@ function NegativeShipment() {
             <div className="row">
               <div className="col-md-6">
                 <div className="form-group">
-                  <label htmlFor="exampleInputEmail1">Department Name</label>
-                  <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Department Name" defaultValue={department} onChange={(value: any) => {
-                    setDepartment(value)
-                  }} />
-
+                  <label htmlFor="exampleInputEmail1">MAWB Number</label>
+                  <input type="text" className="form-control" id="exampleInputEmail1" name="mawbNo" value={formData?.mawbNo || ''}  aria-describedby="emailHelp" placeholder="Department Name" defaultValue={department} onChange={handleChange} />
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="form-group">
-                  <label htmlFor="exampleInputEmail1">File No.</label>
-                  <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="File No."
+                  <label htmlFor="exampleInputEmail1">File No.</label> 
+                  <input type="text" className="form-control" id="exampleInputEmail1"  name="fileNo" value={formData?.fileNo || ''}  aria-describedby="emailHelp" placeholder="File No."
                     defaultValue={fileNo}
-                    onChange={(value: any) => {
-                      setFileNo(value)
-                    }} />
-
+                    onChange={handleChange} />
                 </div>
               </div>
             </div>
@@ -176,9 +192,7 @@ function NegativeShipment() {
               <div className="col-md-6">
                 <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Profit</label>
-                  <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Profit" defaultValue={profit} onChange={(value: any) => {
-                    setProfit(value)
-                  }} />
+                  <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Profit" name="profit" value={formData?.profit || ''} defaultValue={profit} onChange={handleChange}/>
 
                 </div>
               </div>
@@ -206,9 +220,8 @@ function NegativeShipment() {
                 </div>
               </div>
             </div> */}
-            <button type="submit" className="btn-login" style={{ float: 'right', marginTop: "20px" }} onClick={() => {
-              updateRow()
-            }}>Submit</button>
+            <button type="submit" className="btn-login" style={{ float: 'right', marginTop: "20px" }} 
+            onClick={()=>updateRow(event)}>Submit</button>
           </form>
         </>}
 

@@ -3,38 +3,52 @@ import Topnavbar from "./topnavbar/Topnavbar"
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-modal';
-
+import { useDispatch, useSelector } from "react-redux";
+import { UserLogin } from "../redux/reducers/UserLogin";
+import { UserDataReuestModel } from "../shared/request/login";
+import { LOGIN } from "../redux/types";
+import {UserLoginDispatcher } from '../redux/actions/login/userLogin';
 const Layout = () => {
   const navigate = useNavigate();
   const [isLogedIn, setIsLogedIn] = useState(false)
   const [modalIsOpen, setIsOpen] = useState(true);
-
+  const dispatch = useDispatch();
+  const PanelsDispatch = new UserLoginDispatcher(dispatch)
+  const authResponse= useSelector((state:any) => state.authResponse);
+ // const [userName, setUserName] = useState("");
+ // const [password, setPassword] = useState("");
+  const [formData, setForData]= useState<UserDataReuestModel>({});
   useEffect(() => {
-    if (localStorage.getItem("isAuthenticated") == "true") {
-      setIsLogedIn(true)
+    if (sessionStorage.getItem("isAuthenticated") == "true") {
+      setTimeout(function(){
+        navigate('/home')
+        setIsOpen(false)
+        setIsLogedIn(true);
+      },0.100);
     }
     else{
       setIsLogedIn(false)
     }
+  }, [authResponse])
 
-  }, [localStorage.getItem("isAuthenticated")])
-
-  const updateLogin = () => {
-    setIsLogedIn(true)
-    setIsOpen(false)
-     localStorage.setItem("isAuthenticated", "true")
-     setTimeout(function(){
-      navigate('/home')
-      setIsOpen(false)
-    },0.100);
-    ;
-
+  const handleChange = (event: any) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setForData(values => ({...values, [name]: value}))
   }
+
+  const updateLogin = (e:any) => {
+    e.preventDefault();
+    PanelsDispatch.userLoginRequest(formData);
+  }
+  
   const logoutUser = () => {
     navigate('/');
     setIsLogedIn(false)
     setIsOpen(true)
-    localStorage.removeItem("isAuthenticated")
+    sessionStorage.removeItem("isAuthenticated");
+    sessionStorage.removeItem("token");
+    dispatch({type: LOGIN.LOGIN_SUCCESS, payload: {}});
   }
   const customStyles = {
     content: {
@@ -71,12 +85,12 @@ const Layout = () => {
         overlayClassName="Overlay"
       >
         <h3 className="modalTitle">Sign In</h3>
-        <form>
-          <input className='modalInput' placeholder=' User name'/>
-          <input className='modalInput mt-3' type="password" placeholder=' Password'/>
+        <form method="POST" encType="multipart/form-data">
+          <input  type="text" className='modalInput' name="Email" value={formData?.Email || ''}  onChange={handleChange} placeholder=' User name'/>
+          <input className='modalInput mt-3' type="password" name="Password" value={formData.Password || ''}  onChange={handleChange}  placeholder=' Password'/>
           <div className='row mt-3'>
             <div className='col-3'>
-            <button className="btn-login ml-2" onClick={()=>updateLogin()}>Login</button>
+            <button className="btn-login ml-2" onClick={()=>updateLogin(event)}>Login</button>
             </div>
             <div className='col-4 mt-3'>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="remember-me"/>

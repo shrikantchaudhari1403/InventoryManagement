@@ -1,7 +1,17 @@
 
+import { useSelector } from 'react-redux';
 import './topnavbar.css'
+import { useEffect, useState } from 'react';
+
 
 function Topnavbar(props:any){
+  const response= useSelector((state:any) => state.authResponse);
+  const [fullName, setFullName]= useState('');
+ // console.log('for full name'+ authResponse);
+ 
+  useEffect(() => {
+    setFullName(JSON.stringify(response?.data?.fullName))
+  }, [response])
 
   return( <>
   <div>
@@ -39,8 +49,8 @@ function Topnavbar(props:any){
                 </li>
                 <li>
                 <img className= "avatar" src={'../src/assets/profile.png'} />
-                <span className='avatarName'>Hardcore</span>
-                {/* <img src="./../assets/profile.png" alt="Avatar" className="avatar"/> */}
+                <span className='avatarName'>{fullName ?? ''}</span>
+                {/* <img src="./../assets/profile.png" alt="Avatar" className="avatar"/> {authResponse ?? authResponse?.data?.fullName} */}
                 </li>
                 <li className="nav-item active"
                 onClick={()=>{
