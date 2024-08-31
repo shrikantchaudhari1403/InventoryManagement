@@ -36,20 +36,35 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddCors(options => {
-options.AddDefaultPolicy( policy =>
+builder.Services.AddCors(options =>
 {
-    policy.AllowAnyOrigin();
-    policy.AllowAnyMethod();
-    policy.AllowAnyHeader();
-    policy.WithMethods("GET", "PUT", "POST", "DELETE");
+    options.AddPolicy("AllowAllHeaders",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod()
+                   .WithMethods("GET", "PUT", "POST", "DELETE");
+        });
 });
-});
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddDefaultPolicy(policy =>
+//    {
+//        policy.AllowAnyOrigin();
+//        policy.AllowAnyMethod();
+//        policy.AllowAnyHeader();
+//        policy.WithMethods("GET", "PUT", "POST", "DELETE");
+//    });
+//});
 builder.Services.AddScoped<IBaseService,BaseService>();
 builder.Services.AddDbContext<GoFreightDBContext>((option) =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("GoFrideDB"));
 });
+
+builder.Services.AddHttpClient();
 
 builder.Services.AddHealthChecks().AddSqlServer(configuration.GetConnectionString("GoFrideDB") ?? "", tags:new[] { "db"});
 builder.Services.AddControllers(options =>
@@ -61,7 +76,16 @@ builder.Services.AddControllers(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+//builder.Services.AddCors();
+//builder.Services.AddCors(options => options.AddPolicy("CorsPolicy",
+//               builder =>
+//               {
+//                   builder
+//                   .AllowAnyOrigin()
+//                   .AllowAnyMethod()
+//                   .AllowAnyHeader();
+//                  // .AllowCredentials();
+//               }));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -69,14 +93,23 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    // app.UseCors(
+    //    options => options.WithOrigins("*").AllowAnyMethod()
+    //);
+    
 }
+app.UseCors("AllowAllHeaders");
+
 Appconfigurations.ConnectionString = configuration.GetConnectionString("GoFrideDB") ?? "";
 
 app.UseAuthentication();
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseCors();
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:5173/,http://localhost:5173/"));
+//app.UseCors("AllowAll");
+
 app.UseAuthorization();
 //app.UseAuthorization();
 app.UseEndpoints(endpoints =>
@@ -89,5 +122,7 @@ app.UseEndpoints(endpoints =>
     });
 });
 
-//app.MapControllers();
+
+
+app.MapControllers();
 app.Run();
