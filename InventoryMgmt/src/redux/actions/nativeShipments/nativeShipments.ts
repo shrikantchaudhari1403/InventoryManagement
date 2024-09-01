@@ -52,6 +52,25 @@ export class NativeShipmentDispatcher {
         }
     }
 
+    AddNativeShipmentsData = async (data:IShipment): Promise<void> => {
+        try {
+            const formData = new FormData();
+            formData.append('_method', 'post');
+            formData.append('FileNo', data?.fileNo ?? '');
+            formData.append('Profit', data?.profit ?? '');
+            formData.append('MawbNo', data?.mawbNo ?? '');
+           // formData.append('Id', data?.id?.toString());
+            const result= await baseApiService.post("api/GoFrightShipment/AddNegativeShipmentData",formData
+              );
+            this.dispatch({type: SHIPMENTS.GET_ALL_SHIPMENTS_DATA, payload: result});
+        } catch (error: any) {
+            this.dispatch({
+                payload: { data: {} },
+                type: SHIPMENTS.GET_ALL_SHIPMENTS_DATA_ERROR,
+            })
+        }
+    }
+
     deleteNativeShipmentRecord = async (id:any): Promise<void> => {
         try {
             const rowId = id; 

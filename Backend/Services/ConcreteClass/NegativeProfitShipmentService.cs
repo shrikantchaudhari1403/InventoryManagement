@@ -54,12 +54,12 @@ namespace Services.ConcreteClass
             NegativeProfitShipment dataRequest = new NegativeProfitShipment()
             {
                 //  EDT = model.EDT,
-                CreatedBy = model.CreatedBy,
-                CreatedDate = model.CreatedDate,
+                CreatedBy ="admin",
+                CreatedDate =Convert.ToDateTime(DateTime.Now.ToString("HH:mm:ss")),
                 //  DepartmentName = model.DepartmentName,
                 //  ETA = model.ETA,
                 FileNo = model.FileNo,
-                Id = model.Id,
+                //Id = model.Id,
                 MawbNo = model.MawbNo,
                 //  ModifiedBy = model.ModifiedBy,
                 //  ModifiedDate = model.ModifiedDate,

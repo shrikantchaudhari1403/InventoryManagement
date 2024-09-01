@@ -26,7 +26,7 @@ namespace GoFreightShipmentAPI.Controllers
         
         }
 
-        [HttpPut("AddNegativeShipmentData")]
+        [HttpPost("AddNegativeShipmentData")]
         public async Task<IActionResult> AddNegativeShipmentData(NegativeProfitShipmentRequestModel model)
         {
             var result = _baseService.NegativeProfitShipmentService.AddNegativeProfitShipments(model);
