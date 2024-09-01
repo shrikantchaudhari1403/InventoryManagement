@@ -3,6 +3,7 @@ import { Dispatch } from 'redux'
 import BaseApiService from '../../types/BaseApiService';
 import { UserDataReuestModel } from '../../../shared/request/login';
 import baseApiService from '../../types/BaseApiService';
+import { toast } from 'react-toastify';;
 
 export class UserLoginDispatcher {
     private readonly dispatch: Dispatch
@@ -25,10 +26,17 @@ export class UserLoginDispatcher {
 
             sessionStorage.setItem("isAuthenticated",JSON.parse(result.data.isAuthenticated));
             sessionStorage.setItem("token",result.data.token);
-
+            
+            if(result.data.isAuthenticated){
+                toast.success("Authentication successful");
+                
+            }else{
+                toast.error("Autentication failed, please enter valid credentials");
+            }
             this.dispatch({type: LOGIN.LOGIN_SUCCESS, payload: result});
 
         } catch (error: any) {
+            toast.error("Something went wrong! please check with administrator"); 
             this.dispatch({
                 payload: { data: {} },
                 type: LOGIN.LOGIN_FAILURE,
