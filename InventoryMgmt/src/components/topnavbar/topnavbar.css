@@ -1,11 +1,12 @@
 .navbar {
-  position: static;
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  width: 100%;
 }
 
 .btn-login{
@@ -27,6 +28,7 @@
     text-align: center;
     font-size: 12px;
     font-family: serif;
+    border: none;
 }
  .mrl{
   margin-right: 5px;

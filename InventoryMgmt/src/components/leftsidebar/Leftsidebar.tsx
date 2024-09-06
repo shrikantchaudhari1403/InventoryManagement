@@ -12,6 +12,7 @@ function Leftsidebar(props:any){
     sidebar?.classList.toggle('active');
   }
   return( <>
+    <div>
     <div className="sidebar">
           {/* <div className="bi bi-justify" id="btn" onClick={() => { openNav() }}>
             click
@@ -85,6 +86,7 @@ function Leftsidebar(props:any){
               <i className="bx bx-log-out" id="log_out"></i>
             </div>
           </div>
+        </div>
         </div>
   </>)
 }

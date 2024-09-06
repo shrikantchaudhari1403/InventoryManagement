@@ -42,7 +42,7 @@ function Topnavbar(props:any){
                 <span className='avatarName'>Hardcore</span>
                 {/* <img src="./../assets/profile.png" alt="Avatar" className="avatar"/> */}
                 </li>
-                <li className="nav-item active"
+                <li className="nav-item"
                 onClick={()=>{
                   props.logoutUser()
                 }}

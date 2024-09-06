@@ -128,10 +128,15 @@ function NegativeShipment() {
               <div>
                 <span className="title-text">NEGATIVE PROFIT SHIPMENTS</span>
                 <span className="info-text">Export ETD,Import ETA:: 11-10-2020 - 05-09-2021</span>
+                <span><img style={{ height: '15px', width: '30px', cursor: 'pointer' }} src={'../../../src/assets/pencil.svg'} /></span>
               </div>
 
             </div>
-            <div className="col-md-6"></div>
+            <div className="col-md-6">
+              <div style={{float:'right'}}>
+                <button className='refresh'>Refresh</button>
+              </div>
+            </div>
           </div>
         </div>
         {!isEdit ? <div>
@@ -213,7 +218,6 @@ function NegativeShipment() {
         </>}
 
       </div>
-
     </div>
   </>)
 }
