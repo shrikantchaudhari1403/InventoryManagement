@@ -10,6 +10,7 @@ import Settings from '../components/settings/Settings';
 import Login from "../components/login/Login"
 import Layout from "../components/layout"
 import NegativeShipment from "../components/negativeShipment/NegativeShipment"
+import NewShipments from "../components/negativeShipment/NewShipment"
 export const router = createBrowserRouter([
   {
     element: <><Layout /> <Outlet/></>,
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
     { path: '/dashboard', element: <Dashboard />},
     { path: '/settings', element: <Settings />},
     { path: '/negative-shipment', element: <NegativeShipment />},
+    { path: '/new-shipment', element: <NewShipments />}
     ],
   },
 ])

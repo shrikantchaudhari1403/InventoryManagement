@@ -58,7 +58,7 @@ ul {
 .navbar-light .navbar-brand {
   /* color: rgba(0, 0, 0, .9); */
   color: #FFFFFF;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 
 
@@ -68,12 +68,14 @@ ul {
   left: 0;
   height: 100%;
   width: 45px;
-  background: #1a213d;
+  /* background: #1a213d; */
+  background-color: #36454f;
   transition: all 0.5s ease;
 }
 
 .sidebar.active {
   width: 280px;
+  z-index: 999;
 }
 
 .sidebar .logo_content .logo {
@@ -118,20 +120,27 @@ ul {
 .sidebar.active #btn {
   left: 90%;
 }
+.card-body {
+  flex: 1 1 auto;
+  padding: 0}
 
+
+
+/*
 .sidebar ul {
   margin-top: 20px;
-}
+} */
 
 .sidebar ul li {
   position: relative;
-  height: 40px;
-  width: 80%;
-  margin: 0 5px;
+  height: 45px;
+  width: 100%;
+  margin-top: 5px;
+  /* margin: 0 5px;
   list-style: none;
   line-height: 50px;
   padding: 5px 0px 0px 0px;
-  border-radius: 12px;
+  border-radius: 12px; */
 }
 
 .sidebar ul li .tooltip {
@@ -139,7 +148,7 @@ ul {
   left: 122px;
   top: 0;
   transform: translate(-50%, -50%);
-  border-radius: 6px;
+  /* border-radius: 6px; */
   height: 35px;
   width: 122px;
   background: #ffffff;
@@ -168,7 +177,7 @@ ul {
   width: 100%;
   left: 0;
   top: 0;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   outline: none;
   border: none;
   background: #1d1b31;
@@ -196,25 +205,29 @@ ul {
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   white-space: nowrap;
 }
 
 .sidebar ul li a:hover {
   color: #11101d;
   background: #29AB87;
-  height: 40px;
-  width: 35px;
+  height: 45px;
+  width: 100%;
 }
-.active {
+/* .active {
 
+  background: #29AB87;
+} */
+
+.sidebar ul .active {
   background: #29AB87;
 }
 
 .sidebar ul li i {
   height: 50px;
   min-width: 50px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   line-height: 50px;
   text-align: center;
 }
@@ -267,7 +280,7 @@ ul {
   height: 45px;
   width: 45px;
   object-fit: cover;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 .sidebar .profile_content .profile .profile_details .name_job {
@@ -328,11 +341,24 @@ ul {
   margin-left: 0px !important;
 }
 .nav-container{
-  background-color: #1a213d !important;
+  background-color: #36454f !important;
   height: 45px !important;
 }
 .navbar-expand-lg .navbar-collapse {
   display: flex !important;
   flex-basis: auto;
   justify-content: flex-end !important;
+}
+.card {
+  padding: 0em;
+}
+.card-header {
+  padding: .1rem 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  height: 30px;
+  border-radius: 0px;
+  color: #FFFFFF;
+
 }

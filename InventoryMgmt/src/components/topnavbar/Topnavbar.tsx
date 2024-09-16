@@ -2,6 +2,10 @@
 import './topnavbar.css'
 
 function Topnavbar(props:any){
+  const openNav = () => {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar?.classList.toggle('active');
+  }
 
   return( <>
   <div>
@@ -26,7 +30,10 @@ function Topnavbar(props:any){
 </div>
 
   <nav className="navbar navbar-expand-lg navbar-light nav-container">
-            <a className="navbar-brand" href="#">LOGO</a>
+            {/* <a className="navbar-brand" href="#">LOGO</a> */}
+            <div className="navbar-brand" id="btn" onClick={() => { openNav() }}>
+            click
+          </div>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>

@@ -76,7 +76,7 @@ const Layout = () => {
           <input className='modalInput mt-3' type="password" placeholder=' Password'/>
           <div className='row mt-3'>
             <div className='col-3'>
-            <button className="btn-login ml-2" onClick={()=>updateLogin()}>Login</button>
+            <button className="btn-login ml-2" type="submit" onClick={(e)=>{e.preventDefault ,updateLogin()}}>Login</button>
             </div>
             <div className='col-4 mt-3'>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="remember-me"/>
