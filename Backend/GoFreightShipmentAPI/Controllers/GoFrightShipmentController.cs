@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace GoFreightShipmentAPI.Controllers
 {
     [Route("api/[controller]")]
-   // [Authorize]
+    [Authorize]
     [ApiController]
     public class GoFrightShipmentController : ControllerBase
     {
@@ -18,8 +18,7 @@ namespace GoFreightShipmentAPI.Controllers
             _baseService = baseService;
         }
 
-     //   [Authorize]
-        [HttpGet("/GetAllNegativeShipmentData")]
+        [HttpGet("GetAllNegativeShipmentData")]
         public async Task<IActionResult> GetAllNegativeShipmentData() {
             
             var result = _baseService.NegativeProfitShipmentService.GetNegativeProfitShipments();
@@ -27,18 +26,24 @@ namespace GoFreightShipmentAPI.Controllers
         
         }
 
-        [HttpPut]
+        [HttpPost("AddNegativeShipmentData")]
+        public async Task<IActionResult> AddNegativeShipmentData(NegativeProfitShipmentRequestModel model)
+        {
+            var result = _baseService.NegativeProfitShipmentService.AddNegativeProfitShipments(model);
+            return Ok(result);
+        }
+
+        [HttpPut("UpdateNegativeShipmentData")]
         public async Task<IActionResult> UpdateNegativeShipmentData(NegativeProfitShipmentRequestModel model)
         {
             var result = _baseService.NegativeProfitShipmentService.UpdateNegatieShipment(model);
             return Ok(result);
         }
 
-      //  [Authorize]
-        [HttpDelete]
-        public async Task<IActionResult> DeleteNegativeShipmentData(string id)
+        [HttpDelete("DeleteNegativeShipmentData")]
+        public async Task<IActionResult> DeleteNegativeShipmentData(string Id)
         {
-            int shipmentId = Convert.ToInt32(id);
+            int shipmentId = Convert.ToInt32(Id);
             var result = _baseService.NegativeProfitShipmentService.DeleteNegativeProfitShipments(shipmentId);
             return Ok(result);
         }

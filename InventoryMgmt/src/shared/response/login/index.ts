@@ -1,0 +1,1 @@
+export type { UserDataResponseModel } from './userDataResponseModel'

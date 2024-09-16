@@ -59,5 +59,22 @@ namespace GoFreightRepository.Repository.ConcreteClass
             _goFreightDBContext.SaveChanges();
             return _goFreightDBContext.NegativeProfitShipments.AsQueryable();
         }
+
+        public IQueryable<NegativeProfitShipment> AddNegativeShipmentData(NegativeProfitShipment model)
+        {
+            NegativeProfitShipment data = _goFreightDBContext.NegativeProfitShipments.Where(x => x.MawbNo == model.MawbNo && x.FileNo== model.FileNo).FirstOrDefault();
+
+            if (data == null)
+            {
+                _goFreightDBContext.Add(model);
+                _goFreightDBContext.SaveChanges();
+
+            } else
+            {
+                // record already present 
+            }
+            return _goFreightDBContext.NegativeProfitShipments.AsQueryable();
+
+        }
     }
 }

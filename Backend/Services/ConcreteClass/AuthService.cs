@@ -2,6 +2,7 @@
 using GoFreightRepository.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using Services.DTO.Request;
 using Services.DTO.Response;
 using Services.Interface;
@@ -35,8 +36,6 @@ namespace Services.ConcreteClass
             {
                 Email = model.Email,
                 Password = model.Password,
-                Id= model.Id,
-                FullName= model.DisplayName,
             };
 
             var data = _repo.AuthUser.AuthenticateUser(dbObject).Result;
@@ -46,7 +45,17 @@ namespace Services.ConcreteClass
                 result.CreatedDate = DateTime.UtcNow;
                 result.token= token;
                 result.CreatedBy = data.Email;
+                result.FullName = data.FullName;
                 result.IsAuthenticated = true;
+            }
+            else
+            {
+                result.CreatedDate = DateTime.UtcNow;
+                result.token = null;
+                result.CreatedBy = data.Email;
+                result.FullName = data.FullName;
+                result.IsAuthenticated = false;
+
             }
             return Task.FromResult(result);
         }

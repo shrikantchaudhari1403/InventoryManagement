@@ -47,6 +47,46 @@ namespace Services.ConcreteClass
             return dtos.ToList();
         }
 
+        public List<NegativeProfitShipmentDTO> AddNegativeProfitShipments(NegativeProfitShipmentRequestModel model)
+        {
+            List<NegativeProfitShipmentDTO> dtos = new List<NegativeProfitShipmentDTO>();
+
+            NegativeProfitShipment dataRequest = new NegativeProfitShipment()
+            {
+                //  EDT = model.EDT,
+                CreatedBy ="admin",
+                CreatedDate =Convert.ToDateTime(DateTime.Now.ToString("HH:mm:ss")),
+                //  DepartmentName = model.DepartmentName,
+                //  ETA = model.ETA,
+                FileNo = model.FileNo,
+                //Id = model.Id,
+                MawbNo = model.MawbNo,
+                //  ModifiedBy = model.ModifiedBy,
+                //  ModifiedDate = model.ModifiedDate,
+                Profit = model.Profit
+            };
+
+            var shipments = _repo.ProfitShipment.AddNegativeShipmentData(dataRequest).ToList();
+            shipments.ForEach((x) =>
+            {
+                dtos.Add(new NegativeProfitShipmentDTO
+                {
+                    //  EDT=x.EDT,
+                    CreatedBy = x.CreatedBy,
+                    CreatedDate = x.CreatedDate,
+                    //  DepartmentName=x.DepartmentName,
+                    //   ETA=x.ETA,
+                    FileNo = x.FileNo,
+                    Id = x.Id,
+                    MawbNo = x.MawbNo,
+                    //   ModifiedBy=x.ModifiedBy,
+                    //   ModifiedDate=x.ModifiedDate,
+                    Profit = x.Profit
+                });
+            });
+            return dtos.ToList();
+        }
+
         public List<NegativeProfitShipmentDTO> UpdateNegatieShipment(NegativeProfitShipmentRequestModel model)
         {
 

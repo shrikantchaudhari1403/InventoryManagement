@@ -1,6 +1,7 @@
 ﻿using GoFreightHelpers;
 using GoFreightRepository.Models;
 using GoFreightShipmentAPI.Controllers.JWT;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -12,6 +13,7 @@ using System.Text;
 
 namespace GoFreightShipmentAPI.Controllers
 {
+   // [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class UserAuthController : ControllerBase
@@ -26,10 +28,10 @@ namespace GoFreightShipmentAPI.Controllers
         }
 
         [HttpPost("token")]
-        public IActionResult Login(UserDataRequestModel model)
+        public async Task<IActionResult> Login([FromForm] UserDataRequestModel model)
         {
-            //var data = _jwtSettings.Audience;
-            var userAuth = _baseService.AuthService.Login(model, _jwtSettings);
+            var data = _jwtSettings.Audience;
+            var userAuth =await _baseService.AuthService.Login(model, _jwtSettings);
             return Ok(userAuth);
            
         }

@@ -11,6 +11,7 @@ namespace GoFreightRepository.Repository.Interface
 {
     public interface IProfitShipment: IBaseRepository<NegativeProfitShipmentDBModel>
     {
+        IQueryable<NegativeProfitShipment> AddNegativeShipmentData(NegativeProfitShipment model);
         IQueryable<NegativeProfitShipment> GetAllNegativeShipmentData();
         Task<Boolean> DeleteShipmentData(int id);
         IQueryable<NegativeProfitShipment> UpdateNegativeShipmentData(NegativeProfitShipment model);

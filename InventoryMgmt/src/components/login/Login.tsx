@@ -22,7 +22,7 @@ const LoginFinal: FC = () => {
       <Paper elevation={10} style={paperStyle}>
         <Grid>
           <Avatar style={avatarStyle}><LockOutlinedIcon /></Avatar>
-          <h2>Sign In</h2>
+          <h2>Sign In 1</h2>
         </Grid>
         <TextField label='Username' placeholder='Enter username' variant="outlined" fullWidth required />
         <TextField label='Password' placeholder='Enter password' type='password' variant="outlined" fullWidth required />
@@ -41,7 +41,7 @@ const LoginFinal: FC = () => {
             Forgot password ?
           </Link>
         </Typography>
-        <Typography> Do you have an account ?
+        <Typography> Do you have an account1 ?
           <Link href="#">
             Sign Up
           </Link>

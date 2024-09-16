@@ -11,6 +11,7 @@ namespace Services.Interface
 {
     public interface INegativeProfitShipmentService
     {
+        List<NegativeProfitShipmentDTO> AddNegativeProfitShipments(NegativeProfitShipmentRequestModel model);
         List<NegativeProfitShipmentDTO> GetNegativeProfitShipments();
 
         Task<bool> DeleteNegativeProfitShipments(int id);
