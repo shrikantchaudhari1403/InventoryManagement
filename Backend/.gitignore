@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GoFreightHelpers/bin/*
+/GoFreightHelpers/obj/*
+/GoFreightRepository/bin/*
+/GoFreightRepository/obj/*
+/GoFreightShipmentAPI/bin/*
+/GoFreightShipmentAPI/obj/*
+/GoFreightShipmentAPI.dll/*
