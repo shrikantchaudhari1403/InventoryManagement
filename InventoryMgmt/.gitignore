@@ -1,4 +1,9 @@
 # Logs
+/node_modules
+/Services.dll/*
+Service.pdb/*
+/GoFrightShipmentAPI.dll/*
+/.vs
 logs
 *.log
 npm-debug.log*
