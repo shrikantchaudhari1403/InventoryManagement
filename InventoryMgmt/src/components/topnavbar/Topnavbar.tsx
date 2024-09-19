@@ -13,8 +13,11 @@ function Topnavbar(props:any){
     setFullName(JSON.stringify(response?.data?.fullName))
   }, [response])
 
-  function openNav() {
-    throw new Error('Function not implemented.');
+
+  const openNav = () => {
+    props.updateSidebarState()
+    let sidebar = document.querySelector(".sidebar");
+    sidebar?.classList.toggle('active');
   }
 
   return( <>

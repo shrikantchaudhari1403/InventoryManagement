@@ -190,6 +190,12 @@
   background-color: #F1F3F8;
 }
 
+.arrow-right {
+  height: 24px;
+  width: 15px;
+  cursor: pointer;
+}
+
 .form-header {
   background-color: #555555;
   height: 35px;
@@ -202,8 +208,10 @@
 .arrow {
   color: #FFFFFF;
   font-size: 20px;
+  cursor: pointer;
 }
-.date-icon{
+
+.date-icon {
   background-image: url('../../assets/calendar.svg');
   height: 25px;
   width: 14px;
@@ -211,7 +219,8 @@
   background-size: contain;
   background-color: #F1F3F8;
 }
-.save{
+
+.save {
   width: 120px;
   height: 30px;
   background-color: #29AB87;
@@ -231,29 +240,31 @@
   background-color: #E8E8E8;
 }
 
-.label-text
-{
+.label-text {
   font-size: 8px;
   float: right;
-    font-weight: bold;
-    color: grey;
+  font-weight: bold;
+  color: grey;
+  margin-top: 5px;
 }
+
 .text-primary {
   color: #87CEEB !important;
 }
-.mblbox
-{
+
+.mblbox {
   width: 100%;
   height: 25px;
   border: 1px solid #E8E8E8;
   background-color: #FFFFFF;
 }
-.bg
-{
+
+.bg {
   background-color: #F1F3F8;
   margin: 10px 0px 10px 10px;
 }
-.form-border{
+
+.form-border {
   border: 1px solid gray;
 }
 
@@ -262,6 +273,7 @@
 .form-header-title {
   color: #ffff;
   margin-left: 10px;
+  padding: 5px;
 }
 
 .space {
@@ -282,10 +294,12 @@
 }
 
 .breadscrumb-text {
-  font-size: 15px;
+  font-size: 11px;
   margin-left: 10px;
   color: #555555;
+
 }
+
 
 .breadscrumb__arrow {
   transform: rotate(180deg);
@@ -293,15 +307,76 @@
 
 .add-hbl-button {
   height: 35px;
-  width: 98%;
+  width: 90%;
   padding: 2px;
-  margin: 8px 0px 10px 0px;
+  margin: 8px 30px 10px 0px;
   text-align: center;
   background-color: #E8E8E8;
+
 }
 
 .form-select {
   border-radius: 0rem !important;
   height: 30px !important;
   font-size: 10px !important;
+}
+
+.nav {
+  height: 38px !important;
+  display: flex;
+  justify-content: normal !important;
+}
+
+.nav-item {
+  font-size: 12px !important;
+  background-color: #F8F8F8;
+}
+
+.nav-tabs {
+  border-bottom: 0px solid #dee2e6;
+}
+
+.nav-tabs .nav-link.active {
+  color: black;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  font-weight: bold;
+  border-top: 3px solid red;
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: -1px;
+  background: 0 0;
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  color: grey;
+}
+
+.mgl {
+  margin-left: 2px;
+}
+
+.accordion-header {
+  margin-bottom: 0;
+  height: 35px;
+  background-color: #252323;
+  justify-content: space-between;
+  display: flex;
+}
+
+.accordion-item {
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.bgt {
+  background-color: transparent
+}
+
+.accordion-arrow-left {
+  height: 13px;
+  width: 20px;
+  cursor: pointer;
+  margin-top: 10px;
 }

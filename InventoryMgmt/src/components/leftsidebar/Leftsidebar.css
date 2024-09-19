@@ -12,6 +12,64 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+.leftbar-logo{
+  text-align: center;
+    font-size: 24px;
+    color: #FFFF;
+}
+.logo-container{
+  height: 35px;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #36454f;
+  padding: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #F1F3F8;
+  padding-left: 15px;
+}
+.logo-container-active{
+  height: 35px;
+  width: 100%;
+  padding-left: 15px;
+  /* text-align: center; */
+  color: #F1F3F8;
+  background: #29AB87;
+  font-size: 12px;
+  cursor: pointer;
+  /* background-color: #1c2841; */
+  padding: 10px;
+}
+.dropdown-arrow{
+  height: 15px;
+    width: 15px;
+    cursor: pointer;
+    float: right;
+}
+.arrow-left{
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #36454f !important;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+}
+.card-body{
+  padding-left: 20px !important;
+
+}
+
+
 
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -69,13 +127,15 @@ ul {
   height: 100%;
   width: 45px;
   /* background: #1a213d; */
+  /* background-color: #1c2841; */
   background-color: #36454f;
   transition: all 0.5s ease;
 }
 
 .sidebar.active {
-  width: 280px;
+  width: 200px;
   z-index: 999;
+  background-color: #1c2841;
 }
 
 .sidebar .logo_content .logo {

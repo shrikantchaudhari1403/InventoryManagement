@@ -12,26 +12,32 @@ import { toast } from 'react-toastify';
 
 const Layout = () => {
   const navigate = useNavigate();
-  const [isLogedIn, setIsLogedIn] = useState(false)
-  const [modalIsOpen, setIsOpen] = useState(true);
+  const [isLogedIn, setIsLogedIn] = useState(true)
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [collapsableSidebar,setCollapsableSidebar] = useState(true)
   const dispatch = useDispatch();
   const PanelsDispatch = new UserLoginDispatcher(dispatch)
   const authResponse = useSelector((state: any) => state.authResponse);
   // const [userName, setUserName] = useState("");
   // const [password, setPassword] = useState("");
   const [formData, setForData] = useState<UserDataReuestModel>({});
-  useEffect(() => {
-    if (sessionStorage.getItem("isAuthenticated") == "true") {
-      setTimeout(function () {
-        navigate('/home')
-        setIsOpen(false)
-        setIsLogedIn(true);
-      }, 0.100);
-    }
-    else {
-      setIsLogedIn(false)
-    }
-  }, [authResponse])
+  // useEffect(() => {
+  //   if (sessionStorage.getItem("isAuthenticated") == "true") {
+  //     setTimeout(function () {
+  //       navigate('/home')
+  //       setIsOpen(false)
+  //       setIsLogedIn(true);
+  //     }, 0.100);
+  //   }
+  //   else {
+  //     setIsLogedIn(false)
+  //   }
+  // }, [authResponse])
+
+   const updateSidebarState = ()=>{
+    console.log("jdjd==========")
+    setCollapsableSidebar(!collapsableSidebar)
+   }
 
   const handleChange = (event: any) => {
     const name = event.target.name;
@@ -77,7 +83,7 @@ const Layout = () => {
   return (
     <div>
 
-      {isLogedIn == true ? <Leftsidebar /> :
+      {isLogedIn == true ? <Leftsidebar isActive={collapsableSidebar}/> :
         <div>
           <Modal
             isOpen={modalIsOpen}
@@ -109,7 +115,7 @@ const Layout = () => {
       }
       <div className="home_content">
         {/* <Topnavbar updateLogin={updateLogin} logoutUser={logoutUser} isLogedIn={isLogedIn} /> */}
-        <Topnavbar  logoutUser={logoutUser} isLogedIn={isLogedIn} />
+        <Topnavbar  logoutUser={logoutUser} isLogedIn={isLogedIn} updateSidebarState={updateSidebarState} />
       </div>
 
     </div>
