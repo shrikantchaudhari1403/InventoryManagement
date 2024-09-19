@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Leftsidebar(props: any) {
   const { pathname } = useLocation();
-  const [isShow, setIsShow] = useState(false)
+  const [isShow, setIsShow] = useState(false);
 
   const openCollapsableToggle = () => {
     setIsShow(!isShow)
@@ -20,7 +20,7 @@ function Leftsidebar(props: any) {
   }
   return (<>
     <div>
-      <div className={!props.isActive ? "sidebar active" : "sidebar active"}>
+      <div className={!props.isActive ? "sidebar" : "sidebar active"}>
         {props.isActive ?
           <div>
             <div className='leftbar-logo'>GoFreight</div>
