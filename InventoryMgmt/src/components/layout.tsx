@@ -81,7 +81,7 @@ const Layout = () => {
   return (
     <div>
       {isLogedIn == true ? (
-        <Leftsidebar isActive={collapsableSidebar} />
+        <Leftsidebar  />
       ) : (
         <div>
           <Modal

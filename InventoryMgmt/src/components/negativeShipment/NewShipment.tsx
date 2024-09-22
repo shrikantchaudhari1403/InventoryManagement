@@ -65,7 +65,7 @@ function NewShipments() {
             </div>
             <div className='space mb-2'>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>File No</label>
@@ -75,7 +75,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>MB/L No</label>
@@ -85,7 +85,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Office</label>
@@ -100,7 +100,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>OB/L Type</label>
@@ -117,7 +117,7 @@ function NewShipments() {
                 </div>
               </div>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Post Date</label>
@@ -127,7 +127,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>Oversea Agent</label>
@@ -137,7 +137,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>Carrier</label>
@@ -147,7 +147,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>B/L Acct. Carrier</label>
@@ -165,7 +165,7 @@ function NewShipments() {
 
               </div>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Forwarding Agent</label>
@@ -180,7 +180,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Co-loader</label>
@@ -195,7 +195,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Agent Ref No.</label>
@@ -210,7 +210,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Sub B/L No.</label>
@@ -223,7 +223,7 @@ function NewShipments() {
 
               </div>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>OP</label>
@@ -238,7 +238,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Direct Master</label>
@@ -248,10 +248,10 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
 
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
 
                 </div>
               </div>
@@ -259,7 +259,7 @@ function NewShipments() {
             </div>
             <div className='space mb-2'>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Vessel</label>
@@ -274,7 +274,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Voyage</label>
@@ -284,7 +284,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>CY Location </label>
@@ -299,7 +299,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>CFS Location </label>
@@ -316,7 +316,7 @@ function NewShipments() {
                 </div>
               </div>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Port of loading</label>
@@ -331,7 +331,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>ETD</label>
@@ -353,7 +353,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Port of Discharge</label>
@@ -363,7 +363,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>ETA</label>
@@ -389,7 +389,7 @@ function NewShipments() {
 
               </div>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Place of Delivery</label>
@@ -404,7 +404,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4 p-0'>
                       <label className='label-text'>Place of Delivery(ETA)</label>
@@ -427,7 +427,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>Final Destination</label>
@@ -442,7 +442,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>Final ETA</label>
@@ -472,7 +472,7 @@ function NewShipments() {
             </div>
             <div className='space mb-2'>
               <div className='row'>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Freight</label>
@@ -487,7 +487,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text text-primary'>Ship Mode</label>
@@ -497,7 +497,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Service Term</label>
@@ -524,7 +524,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Container/Qty</label>
@@ -542,7 +542,7 @@ function NewShipments() {
               </div>
               <div className='row'>
 
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4 p-0'>
                       <label className='label-text'>Telex release received</label>
@@ -564,7 +564,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4'>
                       <label className='label-text'>Released Date</label>
@@ -587,7 +587,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
                   <div className='row'>
                     <div className='col-4 p-0'>
                       <label className='label-text'>Business Referred By</label>
@@ -602,7 +602,7 @@ function NewShipments() {
                     </div>
                   </div>
                 </div>
-                <div className='col-md-3 col-sm-12'>
+                <div className='col-md-3 col-sm-12 p-0'>
 
                 </div>
 
@@ -640,11 +640,11 @@ function NewShipments() {
         </li>
       </ul>
       <div className="tab-content">
-        <div className={activeTabId == "tabs-1" ? "tab-pane active" : "tab-pane p-3"} id="tabs-1" role="tabpanel">
+        <div className={activeTabId == "tabs-1" ? "tab-pane mlt active" : "tab-pane mlt p-3"} id="tabs-1" role="tabpanel">
           <div className='row'>
-            <div className='col-md-10 col-sm-2'>
+            <div className='col-md-10 col-sm-2 p-0'>
               <div className="accordion" id="accordionExample">
-                <div className="accordion-item mt-2">
+                <div className="accordion-item mt-2 accordion-container">
                   <div className="accordion-header" id="headingOne" onClick={()=>{setActiveAccordian('collapseOne')}}>
                   <div className='form-header-title'>MB/L Information</div>
                   <div>
@@ -655,7 +655,7 @@ function NewShipments() {
                   <div id="collapseOne" className={activeAccordian == 'collapseOne' ?"accordion-collapse collapse show" : "accordion-collapse collapse"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div className='space mb-2'>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>File No</label>
@@ -665,7 +665,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>MB/L No</label>
@@ -675,7 +675,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Office</label>
@@ -690,7 +690,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>OB/L Type</label>
@@ -707,7 +707,7 @@ function NewShipments() {
                         </div>
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Post Date</label>
@@ -717,7 +717,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Oversea Agent</label>
@@ -727,7 +727,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Carrier</label>
@@ -737,7 +737,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>B/L Acct. Carrier</label>
@@ -755,7 +755,7 @@ function NewShipments() {
 
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Forwarding Agent</label>
@@ -770,7 +770,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Co-loader</label>
@@ -785,7 +785,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Agent Ref No.</label>
@@ -800,7 +800,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Sub B/L No.</label>
@@ -813,7 +813,7 @@ function NewShipments() {
 
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>OP</label>
@@ -828,7 +828,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Direct Master</label>
@@ -838,10 +838,10 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
 
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
 
                         </div>
                       </div>
@@ -849,7 +849,7 @@ function NewShipments() {
                     </div>
                     <div className='space mb-2'>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Vessel</label>
@@ -864,7 +864,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Voyage</label>
@@ -874,7 +874,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>CY Location </label>
@@ -889,7 +889,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>CFS Location </label>
@@ -906,7 +906,7 @@ function NewShipments() {
                         </div>
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Port of loading</label>
@@ -921,7 +921,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>ETD</label>
@@ -943,7 +943,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Port of Discharge</label>
@@ -953,7 +953,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>ETA</label>
@@ -979,7 +979,7 @@ function NewShipments() {
 
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Place of Delivery</label>
@@ -994,7 +994,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4 p-0'>
                               <label className='label-text'>Place of Delivery(ETA)</label>
@@ -1017,7 +1017,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Final Destination</label>
@@ -1032,7 +1032,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Final ETA</label>
@@ -1062,7 +1062,7 @@ function NewShipments() {
                     </div>
                     <div className='space mb-2'>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Freight</label>
@@ -1077,7 +1077,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Ship Mode</label>
@@ -1087,7 +1087,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Service Term</label>
@@ -1114,7 +1114,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Container/Qty</label>
@@ -1132,7 +1132,7 @@ function NewShipments() {
                       </div>
                       <div className='row'>
 
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4 p-0'>
                               <label className='label-text'>Telex release received</label>
@@ -1154,7 +1154,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Released Date</label>
@@ -1177,7 +1177,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
                           <div className='row'>
                             <div className='col-4 p-0'>
                               <label className='label-text'>Business Referred By</label>
@@ -1192,7 +1192,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12'>
+                        <div className='col-md-3 col-sm-12 p-0'>
 
                         </div>
 
