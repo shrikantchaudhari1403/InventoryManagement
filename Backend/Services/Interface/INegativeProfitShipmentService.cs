@@ -1,4 +1,4 @@
-﻿using GoFreightRepository.Models;
+﻿using WorldCargoRepository.Models;
 using Services.DTO.Request;
 using Services.DTO.Response;
 using System;
