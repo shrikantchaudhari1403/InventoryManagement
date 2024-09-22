@@ -1,0 +1,62 @@
+
+use WorldCargoFrieght_DB
+go
+drop table if exists dbo.tbl_HBL_Information
+go
+CREATE TABLE dbo.tbl_HBL_Information(
+	File_No					VARCHAR(20),          
+	MBL_No					VARCHAR(20),
+	HBL_No					VARCHAR(20)  NOT NULL,
+	Booking_No				VARCHAR(20),
+	ITN_No					VARCHAR(20),
+	Customer_Ref_No			VARCHAR(50),
+	Document_No				VARCHAR(50),
+	Quotation_No			VARCHAR(50),
+	Actual_Shipper			VARCHAR(200),
+	Customer				VARCHAR(200),
+	Bill_To					VARCHAR(200),
+	Consignee				VARCHAR(50),
+	Notify					VARCHAR(200),
+	Customs_Broker			VARCHAR(50),
+	Trucker					VARCHAR(50),
+	HBL_Agent				VARCHAR(200),
+	Sales					VARCHAR(200),
+	Sub_Agent_BL			BIT,
+	Place_Of_Receipt		VARCHAR(200),
+	Place_Of_Receipt_ETD	DATETIME,
+	Port_Of_Discharge       VARCHAR(200),
+	ETA						DATETIME,
+	Place_Of_Delivery       VARCHAR(200),
+	Place_Of_Delivery_ETA   DATETIME,
+	Final_Destination		VARCHAR(200),
+	Final_ETA				DATETIME,
+	FBA_FC					VARCHAR(100),
+	Empty_Pickup			VARCHAR(50),
+	Delivery_ToPier			VARCHAR(50),
+	Cargo_Ready_Date		DATETIME,
+	Cargo_Pickup			VARCHAR(50),
+	Ship_Mode				VARCHAR(50),
+	Buying_Freight			VARCHAR(200),
+	Selling_Fright			VARCHAR(200),
+	Service_Term			VARCHAR(200),
+	Container_Qty			INT,
+	Express_BL				BIT,
+	Cargo_Type				VARCHAR(50),
+	sales_Type				VARCHAR(200),
+	WH_Cut_Off_Date			DATETIME,
+	Early_Return_Date		DATETIME,
+	LC_No					VARCHAR(50),
+	LC_ISSUE_Bank			VARCHAR(200),
+	LC_ISSUE_Date			DATETIME,
+	Onboard					DATETIME,
+	Stackable				BIT,
+	Hold					BIT,
+	Frt_Released			DATETIME,               
+	Released_By				VARCHAR(200),
+	BL_Cancelled			DATETIME,
+	Cancelled_By			VARCHAR(200),
+	Reason_For_Cancel		VARCHAR(200)
+)
+
+
+ 
