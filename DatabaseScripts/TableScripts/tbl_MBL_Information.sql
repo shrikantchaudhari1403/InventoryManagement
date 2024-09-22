@@ -2,7 +2,8 @@
  --GO
  USE WorldCargoFrieght_DB
  GO
-  
+ DROP TABLE IF EXISTS  dbo.tbl_MBL_Information
+ go
 CREATE TABLE  dbo.tbl_MBL_Information(
 File_No					VARCHAR(20),
 MBL_No					VARCHAR(20),
@@ -18,8 +19,8 @@ Oversea_Agent			VARCHAR(200),
 Notify					VARCHAR(200),
 Forwarding_Agent		VARCHAR(200),
 Co_Loader				VARCHAR(200),
-CO						BIT,
-CO_Value				VARCHAR(200),
+isCOExists				BIT,
+CO						VARCHAR(200),
 Direct_Master			BIT,
 Vessel					VARCHAR(50),
 Voyage					VARCHAR(200),
@@ -37,8 +38,8 @@ Empty_Pickup			VARCHAR(50),
 Delivery_ToPier			VARCHAR(50),
 Freight					VARCHAR(50),
 Ship_Mode				VARCHAR(50),
-SVC_Term1				VARCHAR(10),
-SVC_Term2				VARCHAR(10),
+SVC_TermFrom			VARCHAR(10),
+SVC_TermTo				VARCHAR(10),
 Container_Qty			INT ,
 OBL_Type				VARCHAR(50),
 Doc_Cut_Of_Date			DATETIME,
@@ -49,9 +50,9 @@ BL_Cancelled_Date		DATETIME,
 Reasons_For_Cancel		VARCHAR(200),
 Cancelled_By			VARCHAR(200),
 Bussiness_Reffered_By	VARCHAR(200),       
-Booking_Agent			BIT ,                     ---
+Booking_Agent			BIT ,  
 Frt_Released			BIT ,
-Frt_Released_Date		DATETIME,----
+Frt_Released_Date		DATETIME, 
 Released_By				VARCHAR(200)
 )
 
