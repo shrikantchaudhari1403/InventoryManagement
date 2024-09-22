@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GoFreightHelpers
-build_property.ProjectDir = A:\React New Project\InventoryManagement\Backend\GoFreightHelpers\
+build_property.ProjectDir = A:\WoldCargo\InventoryManagement\Backend\GoFreightHelpers\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1245,51 +1245,51 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "GoFreightHelpers/1.0.0": {
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.7",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
+          "System.IdentityModel.Tokens.Jwt": "8.0.1",
+          "WorldCargoHelpers": "1.0.0",
+          "WorldCargoRepository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
+      },
+      "WorldCargoHelpers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "8.0.0"
         },
         "compile": {
-          "bin/placeholder/GoFreightHelpers.dll": {}
+          "bin/placeholder/WorldCargoHelpers.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GoFreightHelpers.dll": {}
+          "bin/placeholder/WorldCargoHelpers.dll": {}
         }
       },
-      "GoFreightRepository/1.0.0": {
+      "WorldCargoRepository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "GoFreightHelpers": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Extensions": "2.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.7",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.7",
+          "WorldCargoHelpers": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/GoFreightRepository.dll": {}
+          "bin/placeholder/WorldCargoRepository.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GoFreightRepository.dll": {}
-        }
-      },
-      "Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "GoFreightHelpers": "1.0.0",
-          "GoFreightRepository": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.7",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.7",
-          "System.IdentityModel.Tokens.Jwt": "8.0.1"
-        },
-        "compile": {
-          "bin/placeholder/Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Services.dll": {}
+          "bin/placeholder/WorldCargoRepository.dll": {}
         }
       }
     }
@@ -3409,26 +3409,25 @@
         "version.txt"
       ]
     },
-    "GoFreightHelpers/1.0.0": {
-      "type": "project",
-      "path": "../GoFreightHelpers/GoFreightHelpers.csproj",
-      "msbuildProject": "../GoFreightHelpers/GoFreightHelpers.csproj"
-    },
-    "GoFreightRepository/1.0.0": {
-      "type": "project",
-      "path": "../GoFreightRepository/GoFreightRepository.csproj",
-      "msbuildProject": "../GoFreightRepository/GoFreightRepository.csproj"
-    },
     "Services/1.0.0": {
       "type": "project",
       "path": "../Services/Services.csproj",
       "msbuildProject": "../Services/Services.csproj"
+    },
+    "WorldCargoHelpers/1.0.0": {
+      "type": "project",
+      "path": "../WorldCargoHelpers/WorldCargoHelpers.csproj",
+      "msbuildProject": "../WorldCargoHelpers/WorldCargoHelpers.csproj"
+    },
+    "WorldCargoRepository/1.0.0": {
+      "type": "project",
+      "path": "../WorldCargoRepository/WorldCargoRepository.csproj",
+      "msbuildProject": "../WorldCargoRepository/WorldCargoRepository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AspNetCore.HealthChecks.SqlServer >= 8.0.2",
-      "GoFreightHelpers >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.7",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.7",
       "Services >= 1.0.0",
@@ -3443,11 +3442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\GoFreightShipmentAPI.csproj",
+      "projectUniqueName": "A:\\WoldCargo\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\GoFreightShipmentAPI.csproj",
       "projectName": "GoFreightShipmentAPI",
-      "projectPath": "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\GoFreightShipmentAPI.csproj",
+      "projectPath": "A:\\WoldCargo\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\GoFreightShipmentAPI.csproj",
       "packagesPath": "C:\\Users\\shrikant\\.nuget\\packages\\",
-      "outputPath": "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\obj\\",
+      "outputPath": "A:\\WoldCargo\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3469,11 +3468,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightHelpers\\GoFreightHelpers.csproj": {
-              "projectPath": "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightHelpers\\GoFreightHelpers.csproj"
-            },
-            "A:\\React New Project\\InventoryManagement\\Backend\\Services\\Services.csproj": {
-              "projectPath": "A:\\React New Project\\InventoryManagement\\Backend\\Services\\Services.csproj"
+            "A:\\WoldCargo\\InventoryManagement\\Backend\\Services\\Services.csproj": {
+              "projectPath": "A:\\WoldCargo\\InventoryManagement\\Backend\\Services\\Services.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nszAs2dPzFs=",
+  "dgSpecHash": "IFIlP7ozy90=",
   "success": true,
-  "projectFilePath": "A:\\React New Project\\InventoryManagement\\Backend\\Services\\Services.csproj",
+  "projectFilePath": "A:\\WoldCargo\\InventoryManagement\\Backend\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shrikant\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RC0oGaddgpQ=",
+  "dgSpecHash": "tKRCD9SfZq8=",
   "success": true,
-  "projectFilePath": "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\GoFreightShipmentAPI.csproj",
+  "projectFilePath": "A:\\WoldCargo\\InventoryManagement\\Backend\\GoFreightShipmentAPI\\GoFreightShipmentAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shrikant\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\8.0.2\\aspnetcore.healthchecks.sqlserver.8.0.2.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

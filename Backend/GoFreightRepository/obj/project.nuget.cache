@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gGGtq7r6Abc=",
+  "dgSpecHash": "iqnZwLN1KE0=",
   "success": true,
-  "projectFilePath": "A:\\React New Project\\InventoryManagement\\Backend\\GoFreightRepository\\GoFreightRepository.csproj",
+  "projectFilePath": "A:\\WoldCargo\\InventoryManagement\\Backend\\GoFreightRepository\\GoFreightRepository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shrikant\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -30,7 +30,6 @@
     "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.7\\microsoft.entityframeworkcore.tools.8.0.7.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
-    "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\shrikant\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",

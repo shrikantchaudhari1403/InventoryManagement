@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFreightShipmentAPI", "GoFreightShipmentAPI\GoFreightShipmentAPI.csproj", "{3A8431FD-7A6E-4C73-9363-F07227D5B61F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{6AB283FE-B193-496E-ABF2-4894CCD0B5EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFreightRepository", "GoFreightRepository\GoFreightRepository.csproj", "{A914F0F9-6728-412E-8525-ECFE4379F71C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCargoHelpers", "WorldCargoHelpers\WorldCargoHelpers.csproj", "{E454A0BD-2C3A-47E8-AFC9-3698F19E486C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoFreightHelpers", "GoFreightHelpers\GoFreightHelpers.csproj", "{A67EA994-2C50-41AC-AD20-5E43278167F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCargoRepository", "WorldCargoRepository\WorldCargoRepository.csproj", "{888EF0F8-6B5C-4D52-98F8-BF37CAB6518A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{6AB283FE-B193-496E-ABF2-4894CCD0B5EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCargoShipmentAPI", "WorldCargoShipmentAPI\WorldCargoShipmentAPI.csproj", "{4268AA67-C07E-4AD8-B81D-456423446BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3A8431FD-7A6E-4C73-9363-F07227D5B61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A8431FD-7A6E-4C73-9363-F07227D5B61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A8431FD-7A6E-4C73-9363-F07227D5B61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A8431FD-7A6E-4C73-9363-F07227D5B61F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A914F0F9-6728-412E-8525-ECFE4379F71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A914F0F9-6728-412E-8525-ECFE4379F71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A914F0F9-6728-412E-8525-ECFE4379F71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A914F0F9-6728-412E-8525-ECFE4379F71C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A67EA994-2C50-41AC-AD20-5E43278167F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A67EA994-2C50-41AC-AD20-5E43278167F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A67EA994-2C50-41AC-AD20-5E43278167F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A67EA994-2C50-41AC-AD20-5E43278167F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6AB283FE-B193-496E-ABF2-4894CCD0B5EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6AB283FE-B193-496E-ABF2-4894CCD0B5EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AB283FE-B193-496E-ABF2-4894CCD0B5EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AB283FE-B193-496E-ABF2-4894CCD0B5EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E454A0BD-2C3A-47E8-AFC9-3698F19E486C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E454A0BD-2C3A-47E8-AFC9-3698F19E486C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E454A0BD-2C3A-47E8-AFC9-3698F19E486C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E454A0BD-2C3A-47E8-AFC9-3698F19E486C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888EF0F8-6B5C-4D52-98F8-BF37CAB6518A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888EF0F8-6B5C-4D52-98F8-BF37CAB6518A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888EF0F8-6B5C-4D52-98F8-BF37CAB6518A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888EF0F8-6B5C-4D52-98F8-BF37CAB6518A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4268AA67-C07E-4AD8-B81D-456423446BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4268AA67-C07E-4AD8-B81D-456423446BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4268AA67-C07E-4AD8-B81D-456423446BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4268AA67-C07E-4AD8-B81D-456423446BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GoFreightHelpers\GoFreightHelpers.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>
 

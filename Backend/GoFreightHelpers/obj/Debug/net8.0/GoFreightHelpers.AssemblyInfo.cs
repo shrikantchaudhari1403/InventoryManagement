@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoFreightHelpers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5793515900f588c7924c55b9ae30e43516141e61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+111789a5fb2bdf9ac88cb66ec21a5e5e52b65301")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoFreightHelpers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoFreightHelpers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

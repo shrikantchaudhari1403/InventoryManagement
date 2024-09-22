@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GoFreightRepository.Repository;
-using GoFreightRepository.Wrapper;
+using WorldCargoRepository.Repository;
+using WorldCargoRepository.Wrapper;
 using Services.ConcreteClass;
 
 namespace Services.Wrapper
