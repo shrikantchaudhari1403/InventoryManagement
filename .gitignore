@@ -11,3 +11,12 @@
 /GoFreightShipmentAPI/bin/*
 /GoFreightShipmentAPI/obj/*
 
+/Backend/Services/bin/Debug/net8.0
+/Backend/Services/obj
+/Backend/WorldCargoHelpers/bin/Debug/net8.0
+/Backend/WorldCargoHelpers/obj
+/Backend/WorldCargoRepository/bin/Debug/net8.0
+/Backend/WorldCargoRepository/obj/Debug/net8.0
+/Backend/WorldCargoRepository/obj
+/Backend/WorldCargoShipmentAPI/bin/Debug/net8.0
+/Backend/WorldCargoShipmentAPI/obj
