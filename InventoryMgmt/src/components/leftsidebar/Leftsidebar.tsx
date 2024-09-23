@@ -17,6 +17,12 @@ function Leftsidebar(props: any) {
   const naviagetTo = (value:any)=>{
     navigate(value)
   }
+  useEffect(()=>{
+    if(pathname == '/new-shipment')
+    {
+      setIsActive(true)
+    }
+  },[])
 
   useEffect(() => {
     var sidebar = document.querySelector(".sidebar");
@@ -36,7 +42,6 @@ function Leftsidebar(props: any) {
       <div className={!isShow ? "sidebar" : "sidebar active"} id='test'>
         {isShow ?
           <div>
-            <div className='leftbar-logo'>GoFreight</div>
             <div className={pathname == '/home' ? 'logo-container-active' : "logo-container"} onClick={()=>{naviagetTo('/home')}}>
               <img style={{ height: '17px', width: '17px', cursor: 'pointer', margin: '0px 10px 10px 0px' }} src={'../../../src/assets/home.svg'} />
               <span>Dashboard</span></div>

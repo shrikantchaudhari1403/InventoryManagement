@@ -21,17 +21,17 @@ const Layout = () => {
   // const [userName, setUserName] = useState("");
   // const [password, setPassword] = useState("");
   const [formData, setForData] = useState<UserDataReuestModel>({});
-  useEffect(() => {
-    if (sessionStorage.getItem("isAuthenticated") == "true") {
-      setTimeout(function () {
-        navigate("/home");
-        setIsOpen(false);
-        setIsLogedIn(true);
-      }, 0.1);
-    } else {
-      setIsLogedIn(false);
-    }
-  }, [authResponse]);
+  // useEffect(() => {
+  //   if (sessionStorage.getItem("isAuthenticated") == "true") {
+  //     setTimeout(function () {
+  //       navigate("/home");
+  //       setIsOpen(false);
+  //       setIsLogedIn(true);
+  //     }, 0.1);
+  //   } else {
+  //     setIsLogedIn(false);
+  //   }
+  // }, [authResponse]);
 
   const updateSidebarState = () => {
     console.log("jdjd==========");

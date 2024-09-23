@@ -67,7 +67,7 @@ function Topnavbar(props:any){
                   props.logoutUser()
                 }}
                 >
-                  <button className="btn-login ml-2 mrl">Logout</button>
+                  <button className="btn-login ml-2">Logout</button>
 
                 </li>
                 <li className="nav-item">

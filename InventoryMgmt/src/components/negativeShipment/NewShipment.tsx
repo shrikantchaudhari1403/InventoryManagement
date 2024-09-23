@@ -54,586 +54,20 @@ function NewShipments() {
       <div className='breadscrumb-text'>New Shipment</div>
     </div>
 
-    {/* <div>
-      <div className=''>
-        <div className='row bg'>
-          <form className='row'>
-          <div className='col-md-10 col-sm-12 p-0 form-border'>
-            <div className=" form-header">
-              <div className='form-header-title'>MB/L Information</div>
-              <i className="ri-arrow-down-s-line arrow"></i>
-            </div>
-            <div className='space mb-2'>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>File No</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='input-box' defaultValue={fileNo} onChange={e => setFileNo(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>MB/L No</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={mblno} onChange={e => setMblNo(e.target.value)} ></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Office</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={Office}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setOffice(Office) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>OB/L Type</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setOblType(value) }}
-                        value={OBLType}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Post Date</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='input-box' defaultValue={postdate} onChange={e => setPostDate(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>Oversea Agent</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={overseaAgent}  onChange={e => setOverseaAgent(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>Carrier</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={carrier}  onChange={e => setCarrier(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>B/L Acct. Carrier</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setBLAcctcarrier(value) }}
-                        value={BLAcctcarrier}
-                      />
-                    </div>
-                  </div>
-                </div>
 
-              </div>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Forwarding Agent</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={forwardingAgent}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setforwardingAgent(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Co-loader</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={coloader}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setColoader(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Agent Ref No.</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={agentRefNo}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setAgentRefNo(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Sub B/L No.</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={subBLNo} onChange={e => setSubBLNo(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>OP</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={OP}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setOP(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Direct Master</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className="form-check-input" type="checkbox" value ={directMaster} onChange={()=>{setDirectMaster(!directMaster)}} id="flexCheckDefault" />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-
-                </div>
-              </div>
-
-            </div>
-            <div className='space mb-2'>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Vessel</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={vessel}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setVessel( value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Voyage</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={voyage} onChange={e => setVoyoge(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>CY Location </label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={CYlocation}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setCYLocation(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>CFS Location </label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={CFSLocation}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setCFSLocation(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Port of loading</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={portloading}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setPortofloading(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>ETD</label>
-                    </div>
-                    <div className='col-8 p-0 row'>
-                    <div className='col-10'>
-                      <DatePicker
-                        selected={ETD}
-                        onChange={(date:any) => setETD(date)}
-                        required
-                        form="ETD"
-                      />
-                      </div>
-                      <div className='col-2'>
-                      <form id="ETD">
-                        <button type="submit" className='date-icon bgt'></button>
-                      </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Port of Discharge</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={PortofDischarge} onChange={e => setPortofDischarge(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>ETA</label>
-                    </div>
-                    <div className='col-8 p-0 row'>
-                    <div className='col-10'>
-                      <DatePicker
-                        selected={ETA}
-                        onChange={(date:any) => setETA(date)}
-                        required
-                        form="eta"
-                      />
-                      </div>
-                      <div className='col-2'>
-                      <form id="eta">
-                        <button type="submit" className='date-icon bgt'></button>
-
-                      </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Place of Delivery</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={placeofDelivery}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setPlaceofDelivery(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4 p-0'>
-                      <label className='label-text'>Place of Delivery(ETA)</label>
-                    </div>
-                    <div className='col-8 p-0 row'>
-                    <div className='col-10'>
-                      <DatePicker
-                        selected={placeDelevery}
-                        onChange={(date:any) => setPlaceDelivery(date)}
-                        required
-                        form="peta"
-                      />
-                      </div>
-                      <div className='col-2'>
-                      <form id="peta">
-                        <button type="submit" className='date-icon bgt'></button>
-
-                      </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>Final Destination</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={finalDestination}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setFinalDestination(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>Final ETA</label>
-                    </div>
-                    <div className='col-8 p-0 row'>
-                    <div className='col-10'>
-                      <DatePicker
-                        selected={finalETA}
-                        onChange={(date:any) => setFinaleta(date)}
-                        required
-                        form="final-ETA"
-                      />
-                      </div>
-                      <div className='col-2'>
-                      <form id="final-ETA">
-                        <button type="submit" className='date-icon bgt'></button>
-
-                      </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-
-            </div>
-            <div className='space mb-2'>
-              <div className='row'>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Freight</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={freight}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setFreight(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text text-primary'>Ship Mode</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <input className='mblbox' defaultValue={shipmode} onChange={e => setShipmode(e.target.value)}></input>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Service Term</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <div className='row'>
-                        <div className='col-6'>
-                          <CustomSelect
-                            value={serviceTerm1}
-                            options={stateOptions}
-                            fetchingData={false}
-                            onChange={(value: any) => { setServiceTerm1(value) }}
-                          />
-                        </div>
-                        <div className='col-6'>
-                          <CustomSelect
-                            value={serviceTerm2}
-                            options={stateOptions}
-                            fetchingData={false}
-                            onChange={(value: any) => { setServiceTerm2(value) }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Container/Qty</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={containerQty}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setContainerQty(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='row'>
-
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4 p-0'>
-                      <label className='label-text'>Telex release received</label>
-                    </div>
-                    <div className='col-8 p-0 row'>
-                    <div className='col-10'>
-                      <DatePicker
-                        selected={startDate}
-                        onChange={(date:any) => setStartDate(date)}
-                        required
-                        form="telex"
-                      />
-                      </div>
-                      <div className='col-2'>
-                      <form id="telex">
-                        <button type="submit" className='date-icon bgt'></button>
-                      </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <label className='label-text'>Released Date</label>
-                    </div>
-                    <div className='col-8 p-0 row'>
-                    <div className='col-10'>
-                      <DatePicker
-                        selected={releaseDate}
-                        onChange={(date:any) => setReleasedDate(date)}
-                        required
-                        form="released"
-                      />
-                      </div>
-                      <div className='col-2'>
-                      <form id="released">
-                        <button type="submit" className='date-icon bgt'></button>
-
-                      </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-                  <div className='row'>
-                    <div className='col-4 p-0'>
-                      <label className='label-text'>Business Referred By</label>
-                    </div>
-                    <div className='col-8 p-0'>
-                      <CustomSelect
-                        value={businessReferredBy}
-                        options={stateOptions}
-                        fetchingData={false}
-                        onChange={(value: any) => { setBusinessReferredBy(value) }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className='col-md-3 col-sm-12 p-0'>
-
-                </div>
-
-              </div>
-
-            </div>
-            <div className="d-flex justify-content-center">
-              <button className='save'>save</button>
-            </div>
-          </div>
-          <div className='col-md-2 pl-0'>
-            <div className='add-hbl-button'>+ Add HB/L</div>
-          </div>
-
-          </form>
-        </div>
-      </div>
-    </div> */}
     <div className="mgl">
       <ul className="nav nav-tabs tp-header" role="tablist">
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-1') }}>
           <a className={activeTabId == "tabs-1" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-1" role="tab">Basic</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-2') }}>
-          <a className={activeTabId == "tabs-2" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-2" role="tab">Accounting</a>
+          <a className={activeTabId == "tabs-2" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-2" role="tab">Container & Item</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-3') }}>
-          <a className={activeTabId == "tabs-3" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-3" role="tab">Doc Center</a>
+          <a className={activeTabId == "tabs-3" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-3" role="tab">Accounting</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-4') }}>
-          <a className={activeTabId == "tabs-4" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-1" role="tab">Work Order</a>
+          <a className={activeTabId == "tabs-4" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-1" role="tab">Doc Center</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-5') }}>
           <a className={activeTabId == "tabs-5" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-2" role="tab">Status</a>
@@ -655,7 +89,7 @@ function NewShipments() {
                   <div id="collapseOne" className={activeAccordian == 'collapseOne' ?"accordion-collapse collapse show" : "accordion-collapse collapse"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div className='space mb-2'>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>File No</label>
@@ -665,7 +99,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>MB/L No</label>
@@ -675,7 +109,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Office</label>
@@ -690,7 +124,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>OB/L Type</label>
@@ -707,7 +141,7 @@ function NewShipments() {
                         </div>
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Post Date</label>
@@ -717,7 +151,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Oversea Agent</label>
@@ -727,7 +161,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Carrier</label>
@@ -737,7 +171,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>B/L Acct. Carrier</label>
@@ -755,7 +189,7 @@ function NewShipments() {
 
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Forwarding Agent</label>
@@ -770,7 +204,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Co-loader</label>
@@ -785,7 +219,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Agent Ref No.</label>
@@ -800,7 +234,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Sub B/L No.</label>
@@ -813,7 +247,7 @@ function NewShipments() {
 
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>OP</label>
@@ -828,7 +262,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Direct Master</label>
@@ -838,10 +272,10 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
 
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
 
                         </div>
                       </div>
@@ -849,7 +283,7 @@ function NewShipments() {
                     </div>
                     <div className='space mb-2'>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Vessel</label>
@@ -864,7 +298,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Voyage</label>
@@ -874,7 +308,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>CY Location </label>
@@ -889,7 +323,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>CFS Location </label>
@@ -906,7 +340,7 @@ function NewShipments() {
                         </div>
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Port of loading</label>
@@ -921,7 +355,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>ETD</label>
@@ -943,7 +377,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Port of Discharge</label>
@@ -953,7 +387,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>ETA</label>
@@ -979,7 +413,7 @@ function NewShipments() {
 
                       </div>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Place of Delivery</label>
@@ -994,7 +428,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4 p-0'>
                               <label className='label-text'>Place of Delivery(ETA)</label>
@@ -1017,7 +451,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Final Destination</label>
@@ -1032,7 +466,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Final ETA</label>
@@ -1062,7 +496,7 @@ function NewShipments() {
                     </div>
                     <div className='space mb-2'>
                       <div className='row'>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Freight</label>
@@ -1077,7 +511,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text text-primary'>Ship Mode</label>
@@ -1087,7 +521,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Service Term</label>
@@ -1114,7 +548,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Container/Qty</label>
@@ -1132,7 +566,7 @@ function NewShipments() {
                       </div>
                       <div className='row'>
 
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4 p-0'>
                               <label className='label-text'>Telex release received</label>
@@ -1154,7 +588,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4'>
                               <label className='label-text'>Released Date</label>
@@ -1177,7 +611,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
                           <div className='row'>
                             <div className='col-4 p-0'>
                               <label className='label-text'>Business Referred By</label>
@@ -1192,7 +626,7 @@ function NewShipments() {
                             </div>
                           </div>
                         </div>
-                        <div className='col-md-3 col-sm-12 p-0'>
+                        <div className='col-md-3 col-sm-12'>
 
                         </div>
 
