@@ -1,5 +1,5 @@
-﻿using GoFreightHelpers;
-using GoFreightRepository.Models;
+﻿using WorldCargoHelpers;
+using WorldCargoRepository.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json.Linq;

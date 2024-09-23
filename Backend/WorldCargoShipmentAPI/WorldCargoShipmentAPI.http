@@ -1,0 +1,6 @@
+@WorldCargoShipmentAPI_HostAddress = http://localhost:5296
+
+GET {{WorldCargoShipmentAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

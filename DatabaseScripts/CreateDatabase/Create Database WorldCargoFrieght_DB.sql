@@ -1,0 +1,2 @@
+Create database WorldCargoFrieght_DB
+GO
