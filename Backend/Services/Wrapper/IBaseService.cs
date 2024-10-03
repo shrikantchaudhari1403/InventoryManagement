@@ -11,5 +11,6 @@ namespace Services.Wrapper
     {
         INegativeProfitShipmentService NegativeProfitShipmentService { get; }
         IAuthService AuthService { get; }
+        IOceanExportService OceanExportService { get; }
     }
 }

@@ -10,6 +10,7 @@ namespace WorldCargoRepository.Wrapper
     public interface IRepositoryWrapper
     {
         IProfitShipment ProfitShipment { get; }
-        IAuthUser AuthUser { get; } 
+        IAuthUser AuthUser { get; }
+        IOceanExportData OceanExportData { get; }
     }
 }

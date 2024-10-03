@@ -13,7 +13,8 @@ namespace Services.Wrapper
     public class BaseService : IBaseService
     {
         INegativeProfitShipmentService negativeProfitShipmentService;
-        IAuthService authService; 
+        IAuthService authService;
+        IOceanExportService oceanExportService;
         internal IRepositoryWrapper _repo;
 
         public BaseService()
@@ -30,6 +31,19 @@ namespace Services.Wrapper
                     negativeProfitShipmentService= new NegativeProfitShipmentService();
                 }
                 return negativeProfitShipmentService;
+            }
+
+        }
+
+        public IOceanExportService OceanExportService
+        {
+            get
+            {
+                if (oceanExportService == null)
+                {
+                    oceanExportService = new OceanExportService();
+                }
+                return oceanExportService;
             }
 
         }

@@ -6,6 +6,7 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt } from 'react-icons/fa';
 import { useState } from 'react';
+import { MblRequestModel } from '../../shared/request/mbl';
 
 
 function NewShipments() {
@@ -45,6 +46,12 @@ function NewShipments() {
   const [serviceTerm2, setServiceTerm2] = useState({})
   const [containerQty, setContainerQty] = useState({})
   const [businessReferredBy, setBusinessReferredBy] = useState({})
+  const [formData, setForData] = useState<MblRequestModel>({});
+ // const saveData
+ 
+ const saveMblData = (event: any) => {
+   
+};  
 
   return (<div style={{ margin: '45px 0px 0px 45px' }}>
     <div className="top-header tp-header">
@@ -640,7 +647,7 @@ function NewShipments() {
 
                     </div>
                     <div className="d-flex justify-content-center">
-                      <button className='save'>save</button>
+                      <button className='save' onClick={saveMblData}>save</button>
                     </div>
                   </div>
                 </div>

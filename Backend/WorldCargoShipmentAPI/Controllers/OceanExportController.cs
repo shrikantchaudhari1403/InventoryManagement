@@ -16,21 +16,32 @@ namespace WorldCargoShipmentAPI.Controllers
             _baseService = baseService;
         }
 
-        [HttpGet("GetAllMblData")]
-        public async Task<IActionResult> GetAllMblData()
+        [HttpGet("GetAllHblData")]
+        public async Task<IActionResult> GetAllHblData()
         {
 
-            var result = _baseService.NegativeProfitShipmentService.GetNegativeProfitShipments();
+            var result = _baseService.OceanExportService.GetOceanExportHblData();
             return Ok(result);
 
         }
 
-        [HttpPost("AddNewShipmentMblData")]
-        public async Task<IActionResult> AddNewShipmentMblData(NegativeProfitShipmentRequestModel model)
+        [HttpPost("AddHblData")]
+        public async Task<IActionResult> AddHblData([FromBody] AddHblRequestModel model)
         {
-            var result = _baseService.NegativeProfitShipmentService.AddNegativeProfitShipments(model);
+
+            var result = _baseService.OceanExportService.AddHblData(model);
             return Ok(result);
+
         }
+
+        [HttpPost("AddMblData")]
+        public async Task<IActionResult> AddMblData([FromBody] AddMblRequestModel model)
+        {
+            var result = _baseService.OceanExportService.AddMblData(model);
+            return Ok(result);
+
+        }
+
 
         [HttpPut("UpdateNewShipmentMblData")]
         public async Task<IActionResult> UpdateNewShipmentMblData(NegativeProfitShipmentRequestModel model)

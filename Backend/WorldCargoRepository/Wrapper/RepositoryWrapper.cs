@@ -1,9 +1,4 @@
 ﻿using WorldCargoRepository.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WorldCargoHelpers;
 using WorldCargoRepository.Repository.Interface;
 using WorldCargoRepository.Repository.ConcreteClass;
@@ -15,6 +10,7 @@ namespace WorldCargoRepository.Wrapper
         private WorldCargoDBContext _repoContext;
         private IProfitShipment profitShipment;
         private IAuthUser authUser;
+        private IOceanExportData exportHblData;
 
         public RepositoryWrapper() {
             _repoContext = new WorldCargoDBContext(Appconfigurations.ConnectionString);
@@ -43,6 +39,19 @@ namespace WorldCargoRepository.Wrapper
                 return authUser;
             }
         }
+
+        public IOceanExportData OceanExportData
+        {
+            get
+            {
+                if (exportHblData == null)
+                {
+                    exportHblData = new OceanExportData(_repoContext);
+                }
+                return exportHblData;
+            }
+        }
+
 
         public void Save()
         {
