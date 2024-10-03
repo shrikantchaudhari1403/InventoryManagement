@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 
 const Layout = () => {
   const navigate = useNavigate();
-  const [isLogedIn, setIsLogedIn] = useState(true);
+  const [isLogedIn, setIsLogedIn] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [collapsableSidebar, setCollapsableSidebar] = useState(false);
   const dispatch = useDispatch();
@@ -81,7 +81,7 @@ const Layout = () => {
   return (
     <div>
       {isLogedIn == true ? (
-        <Leftsidebar isActive={collapsableSidebar} />
+        <Leftsidebar  />
       ) : (
         <div>
           <Modal

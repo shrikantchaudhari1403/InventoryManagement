@@ -193,9 +193,11 @@ ul {
 
 .sidebar ul li {
   position: relative;
-  height: 45px;
+  height: 35px;
   width: 100%;
   margin-top: 5px;
+  padding-left: 3px;
+
   /* margin: 0 5px;
   list-style: none;
   line-height: 50px;
@@ -272,8 +274,15 @@ ul {
 .sidebar ul li a:hover {
   color: #11101d;
   background: #29AB87;
-  height: 45px;
+  height: 36px;
   width: 100%;
+}
+
+.li-item{
+  height: 18px;
+  width: 30px;
+  cursor: pointer;
+  margin-top: 7px;
 }
 /* .active {
 

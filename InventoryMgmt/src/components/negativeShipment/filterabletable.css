@@ -187,7 +187,7 @@
 }
 
 .tp-header {
-  background-color: #F1F3F8;
+  background-color: #E1EDF0;
 }
 
 .arrow-right {
@@ -213,7 +213,7 @@
 
 .date-icon {
   background-image: url('../../assets/calendar.svg');
-  height: 25px;
+  height: 20px;
   width: 14px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -233,18 +233,26 @@
 }
 
 
+.accordion-item {
+  border: 1px solid black;
+  background-color: #F8F8F8 !important;
+}
 .input-box {
   width: 100%;
-  height: 25px;
+  height: 20px;
   border: 0px;
   background-color: #E8E8E8;
+}
+.react-datepicker__input-container >input{
+  width: 113%;
+  border: 0.5px solid gray;
 }
 
 .label-text {
   font-size: 8px;
   float: right;
   font-weight: bold;
-  color: grey;
+  color: black;
   margin-top: 5px;
 }
 
@@ -277,9 +285,10 @@
 }
 
 .space {
-  padding: 10px 10px 10px 10px;
-  margin: 5px 5px 5px 5px;
+  padding: 5px 10px 2px 2px;
+  margin: 5px 15px 5px 5px;
 }
+
 
 .top-header {
   height: 40px;
@@ -306,13 +315,20 @@
 }
 
 .add-hbl-button {
-  height: 35px;
-  width: 90%;
+  height: 40px;
+  width: 88%;
   padding: 2px;
-  margin: 8px 30px 10px 0px;
+  margin: 8px 20px 10px 10px;
   text-align: center;
   background-color: #E8E8E8;
+  cursor: pointer;
+  align-self: center;
+  padding: 8px;
+  font-weight: 600;
+}
 
+.mlt{
+  margin-left: 10px;
 }
 
 .form-select {
@@ -359,10 +375,11 @@
 
 .accordion-header {
   margin-bottom: 0;
-  height: 35px;
+  height: 40px;
   background-color: #252323;
   justify-content: space-between;
   display: flex;
+  cursor: pointer;
 }
 
 .accordion-item {
@@ -379,4 +396,26 @@
   width: 20px;
   cursor: pointer;
   margin-top: 10px;
+}
+.bg-yellow{
+  background-color: yellow;
+}
+.react-datepicker-wrapper{
+  width: 92%;
+}
+.red-star{
+  color: red;
+  margin-right: 2px;
+}
+.accordion-footer{
+  height: 36px;
+  background-color: #E8E8E8;
+}
+.accordion-header-active {
+  margin-bottom: 0;
+  height: 40px;
+  background-color: orange;
+  justify-content: space-between;
+  display: flex;
+  cursor: pointer;
 }
