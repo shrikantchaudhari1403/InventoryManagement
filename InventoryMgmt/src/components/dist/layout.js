@@ -22,7 +22,7 @@ var userLogin_1 = require("../redux/actions/login/userLogin");
 var react_toastify_1 = require("react-toastify");
 var Layout = function () {
     var navigate = react_router_dom_1.useNavigate();
-    var _a = react_1.useState(true), isLogedIn = _a[0], setIsLogedIn = _a[1];
+    var _a = react_1.useState(false), isLogedIn = _a[0], setIsLogedIn = _a[1];
     var _b = react_1.useState(false), modalIsOpen = _b[0], setIsOpen = _b[1];
     var _c = react_1.useState(false), collapsableSidebar = _c[0], setCollapsableSidebar = _c[1];
     var dispatch = react_redux_1.useDispatch();
@@ -31,17 +31,18 @@ var Layout = function () {
     // const [userName, setUserName] = useState("");
     // const [password, setPassword] = useState("");
     var _d = react_1.useState({}), formData = _d[0], setForData = _d[1];
-    // useEffect(() => {
-    //   if (sessionStorage.getItem("isAuthenticated") == "true") {
-    //     setTimeout(function () {
-    //       navigate("/home");
-    //       setIsOpen(false);
-    //       setIsLogedIn(true);
-    //     }, 0.1);
-    //   } else {
-    //     setIsLogedIn(false);
-    //   }
-    // }, [authResponse]);
+    react_1.useEffect(function () {
+        if (sessionStorage.getItem("isAuthenticated") == "true") {
+            setTimeout(function () {
+                navigate("/home");
+                setIsOpen(false);
+                setIsLogedIn(true);
+            }, 0.1);
+        }
+        else {
+            setIsLogedIn(false);
+        }
+    }, [authResponse]);
     var updateSidebarState = function () {
         console.log("jdjd==========");
         setCollapsableSidebar(!collapsableSidebar);

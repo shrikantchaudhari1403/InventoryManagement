@@ -296,7 +296,7 @@ function Leftsidebar(props: any) {
                 <img className='li-item' src={'../src/assets/home.svg'} />
               </Link>
             </li>
-            <li className={pathname == '/dashboard' ? 'active' : ""}>
+            <li className={pathname == '/new-shipment' ? 'active' : ""}>
               <Link to={'/dashboard'} >
                 <img className='li-item' src={'../src/assets/stats.svg'} />
               </Link>

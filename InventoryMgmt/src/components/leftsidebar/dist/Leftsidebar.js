@@ -224,7 +224,7 @@ function Leftsidebar(props) {
                         React.createElement("li", { className: pathname == '/home' ? 'active' : "" },
                             React.createElement(react_router_dom_1.Link, { to: "/home" },
                                 React.createElement("img", { className: 'li-item', src: '../src/assets/home.svg' }))),
-                        React.createElement("li", { className: pathname == '/dashboard' ? 'active' : "" },
+                        React.createElement("li", { className: pathname == '/new-shipment' ? 'active' : "" },
                             React.createElement(react_router_dom_1.Link, { to: '/dashboard' },
                                 React.createElement("img", { className: 'li-item', src: '../src/assets/stats.svg' }))),
                         React.createElement("li", { className: pathname == '/negative-shipment' ? 'active' : "" },

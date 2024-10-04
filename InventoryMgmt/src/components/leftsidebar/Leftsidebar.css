@@ -279,9 +279,10 @@ ul {
 }
 
 .li-item{
-  height: 20px;
+  height: 18px;
   width: 30px;
-  cursor: pointer
+  cursor: pointer;
+  margin-top: 7px;
 }
 /* .active {
 
