@@ -34,7 +34,7 @@ namespace WorldCargoRepository.Repository.Data
                 Cargo_Ready_Date = x["Cargo_Ready_Date"] != DBNull.Value ? Convert.ToDateTime(x["Cargo_Ready_Date"]) : null,
                 Cargo_Type = x["Cargo_Type"] == DBNull.Value ? null : Convert.ToString(x["Cargo_Type"]),
                 Consignee = x["Consignee"] == DBNull.Value ? null : Convert.ToString(x["Consignee"]),
-                Container_Qty = x["Consignee"] == DBNull.Value ? null : Convert.ToInt32(x["Consignee"]),
+                Container_Qty = x["Container_Qty"] == DBNull.Value ? null : Convert.ToInt32(x["Container_Qty"]),
                 Customer = x["Customer"] == DBNull.Value ? null : Convert.ToString(x["Customer"]),
                 Customer_Ref_No = x["Customer_Ref_No"] == DBNull.Value ? null : Convert.ToString(x["Customer_Ref_No"]),
                 Customs_Broker = x["Customs_Broker"] == DBNull.Value ? null : Convert.ToString(x["Customs_Broker"]),
@@ -43,7 +43,7 @@ namespace WorldCargoRepository.Repository.Data
                 Early_Return_Date = x["Early_Return_Date"] != DBNull.Value ? Convert.ToDateTime(x["Early_Return_Date"]) : null,
                 Empty_Pickup = x["Empty_Pickup"] == DBNull.Value ? null : Convert.ToString(x["Empty_Pickup"]),
                 ETA = x["ETA"] != DBNull.Value ? Convert.ToDateTime(x["ETA"]) : null,
-                Express_BL = x["ETA"] != DBNull.Value ? Convert.ToBoolean(x["ETA"]) : null,
+                Express_BL = x["Express_BL"] != DBNull.Value ? Convert.ToBoolean(x["Express_BL"]) : null,
 
             });
         }

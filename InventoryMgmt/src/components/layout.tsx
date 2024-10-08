@@ -30,6 +30,7 @@ const Layout = () => {
       }, 0.1);
     } else {
       setIsLogedIn(false);
+      setIsOpen(true);
     }
   }, [authResponse]);
 

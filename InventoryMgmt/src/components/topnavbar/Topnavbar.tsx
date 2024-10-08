@@ -16,7 +16,6 @@ function Topnavbar(props:any){
 
   const openNav = () => {
     props.updateSidebarState()
-
   }
 
   return( <>
@@ -67,8 +66,9 @@ function Topnavbar(props:any){
                   props.logoutUser()
                 }}
                 >
-                  <button className="btn-login ml-2">Logout</button>
-
+                 {sessionStorage.getItem("isAuthenticated") == "true" && (
+                       <button className="btn-login ml-2">Logout</button>
+                    )}
                 </li>
                 <li className="nav-item">
 
