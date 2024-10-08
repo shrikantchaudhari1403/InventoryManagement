@@ -1,0 +1,21 @@
+
+CREATE TABLE dbo.tbl_PO_Container_Commodity_HBL (
+PO_NO                  BIGINT,
+Container_No           BIGINT,
+Cartons_PKG            INT,
+Weight_KG              FLOAT,
+Measurement            FLOAT,
+PO_NO1                 BIGINT,
+Commodity_Description  NVARCHAR(500) NOT NULL,
+HTS_Code               BIGINT,
+PCS                    INT,
+Net_Weight             BIGINT,
+Gross_Weight           BIGINT,
+Unit_price             INT,
+Amount                 BIGINT,
+Commodity_Details      NVARCHAR(500),
+Container              NVARCHAR(500),
+Marks                  FLOAT,
+Description1           NVARCHAR(500),
+Booking_Remarks        VARCHAR(100),
+)
