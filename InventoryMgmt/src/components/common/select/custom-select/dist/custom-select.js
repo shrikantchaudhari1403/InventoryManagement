@@ -41,8 +41,8 @@ var Option = function (props) {
                         } }, "Delete"))))));
 };
 var CustomSelect = function (_a) {
-    var options = _a.options, changeOptionsData = _a.changeOptionsData, fetchingData = _a.fetchingData, onChange = _a.onChange, value = _a.value;
+    var options = _a.options, changeOptionsData = _a.changeOptionsData, fetchingData = _a.fetchingData, onChange = _a.onChange, value = _a.value, name = _a.name;
     return (react_1["default"].createElement("div", null,
-        react_1["default"].createElement(react_select_1["default"], { options: options, components: { Menu: Menu }, fetchingData: fetchingData, changeOptionsData: changeOptionsData, onChange: onChange, value: value })));
+        react_1["default"].createElement(react_select_1["default"], { name: name, options: options, components: { Menu: Menu }, fetchingData: fetchingData, changeOptionsData: changeOptionsData, onChange: onChange, value: value })));
 };
 exports["default"] = CustomSelect;

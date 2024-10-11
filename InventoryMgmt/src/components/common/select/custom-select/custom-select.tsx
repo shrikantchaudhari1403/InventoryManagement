@@ -60,16 +60,18 @@ const Option = (props:any) => {
   );
 };
 
-const CustomSelect = ({ options, changeOptionsData, fetchingData, onChange,value }: {
+const CustomSelect = ({ options, changeOptionsData, fetchingData, onChange,value ,name}: {
   options?: any;
   changeOptionsData?: any;
   fetchingData?: any;
   onChange?: any;
-  value?:any
+  value?:any;
+  name?:any;
 }) => {
   return (
     <div>
       <Select
+        name={name}
         options={options}
         components={{ Menu }}
         fetchingData={fetchingData}
