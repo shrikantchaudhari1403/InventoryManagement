@@ -4,6 +4,7 @@ import { UserLogin } from './UserLogin'
 
 const rootReducer = combineReducers({
   NativeShipments,
+  
   authResponse:UserLogin
 })
 

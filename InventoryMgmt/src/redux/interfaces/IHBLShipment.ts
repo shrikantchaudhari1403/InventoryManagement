@@ -1,29 +1,23 @@
-export interface MblRequestModel {
-  operationType?: string;
+export interface IHBLShipment{
   fileNo?: string;
   mblNo?: string;
-  office?: string;
-  etd?: Date;
-  blType?: string;
-  postDate?: Date;
-  carrierBkgNo?: string;
-  itnNo?: string;
-  carrier?: string;
-  blAcctCarrier?: string;
-  shippingAgent?: string;
-  overseaAgent?: string;
+  hblNo?: string;
+  bookingNo?: string;
+  itdNo?: string;
+  customerReferenceNo?: string;
+  documentNo?: string;
+  quotationNo?: string;
+  actualShipper?: string;
+  customer?: string;
+  billTo?: string;
+  consignee?: string;
   notify?: string;
-  forwardingAgent?: string;
-  coLoader?: string;
-  isCoExists?: string;
-  co?: string;
-  directMaster?: string;
-  vessel?: string;
-  voyage?: string;
-  planceOfReceipt?: string;
-  placeOfReceptETD?: Date;
-  portOfLoading?: string;
-  placeOfDischarge?: string;
+  customerBroker?: string;
+  tracker?: string;
+  hblAgent?: string;
+  sales?: string;
+  subAjentBl?: string;
+  placeOfReceipt?: string;
   placeOfReceiptETD?: Date;
   portOfDischarge?: string;
   eta?: Date;
@@ -52,6 +46,3 @@ export interface MblRequestModel {
   frtReleasedDate?: Date;
   releasedBy?: string;
 }
-
-
-

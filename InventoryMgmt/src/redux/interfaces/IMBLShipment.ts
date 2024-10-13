@@ -1,5 +1,6 @@
-export interface MblRequestModel {
-  operationType?: string;
+import { IHBLShipment } from "./IHBLShipment";
+
+export interface IMBLShipment {
   fileNo?: string;
   mblNo?: string;
   office?: string;
@@ -51,7 +52,5 @@ export interface MblRequestModel {
   frtReleased?: string;
   frtReleasedDate?: Date;
   releasedBy?: string;
+  hblData: IHBLShipment[];
 }
-
-
-

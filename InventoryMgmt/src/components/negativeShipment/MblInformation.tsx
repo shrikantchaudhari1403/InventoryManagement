@@ -130,6 +130,7 @@ function MblInformation() {
     formData.finalETA = finalETA;
     formData.frtReleasedDate = releaseDate
     console.log("fhfhf", formData)
+
   };
 
   return (
@@ -139,7 +140,7 @@ function MblInformation() {
           <div className='col-md-4 col-sm-12'>
             <div className='row'>
               <div className='col-4'>
-                <label className='label-text'> <span className='red-star'>*</span>File No</label>
+                <label className='label-text'> <span className='red-star'></span>File No</label>
               </div>
               <div className='col-8 p-0'>
                 <input className='input-box'
@@ -152,7 +153,7 @@ function MblInformation() {
           <div className='col-md-4 col-sm-12'>
             <div className='row'>
               <div className='col-4'>
-                <label className='label-text'>MB/L No</label>
+                <label className='label-text'>MB/L No*</label>
               </div>
               <div className='col-8 p-0'>
                 <input className='mblbox'
@@ -165,7 +166,7 @@ function MblInformation() {
           <div className='col-md-4 col-sm-12'>
             <div className='row'>
               <div className='col-4'>
-                <label className='label-text'>Office</label>
+                <label className='label-text'>Office*</label>
               </div>
               <div className='col-8 p-0'>
                 <CustomSelect
@@ -411,7 +412,7 @@ function MblInformation() {
           <div className='col-md-4 col-sm-12'>
             <div className='row'>
               <div className='col-4'>
-                <label className='label-text text-primary'>ETD</label>
+                <label className='label-text text-primary'>ETD*</label>
               </div>
               <div className='col-8 row'>
                 <div className='col-10 p-0'>

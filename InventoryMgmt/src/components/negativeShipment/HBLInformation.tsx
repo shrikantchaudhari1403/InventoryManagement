@@ -86,8 +86,6 @@ function HBLInformation() {
   }
 
 
-
-
   const [directMaster, setDirectMaster] = useState(false)
   const [containerQty, setContainerQty] = useState({})
   const [PiaceofReceiptETD, setPiaceofReceiptETD] = useState(null)
@@ -134,12 +132,13 @@ function HBLInformation() {
     formData.eta = ETA;
     formData.earlyReturnDate = EarlyReturnDate;
     formData.lcIssueDate = LCIssueDate;
-    formData.cargoReadyDate = CargoReadyDate;
+    formData.cargoReadyDate = CargoReadyDate;    
     formData.onBoard = onboard;
     formData.blCancelled = BLCancelled;
     formData.placeOfDeliveryETA = PlaceofDeliveryETA;
     formData.placeOfReceiptETD = PiaceofReceiptETD;
     formData.cutOffDate = WHCuttOfDate;
+   
     console.log("fhfhf", formData)
   };
 
