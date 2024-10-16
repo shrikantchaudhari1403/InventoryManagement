@@ -52,5 +52,5 @@ export interface IMBLShipment {
   frtReleased?: string;
   frtReleasedDate?: Date;
   releasedBy?: string;
-  hblData: IHBLShipment[];
+  hblData?: Array<IHBLShipment>;
 }

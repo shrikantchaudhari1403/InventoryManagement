@@ -108,4 +108,13 @@ export class MBLShipmentDispatcher {
       });
     }
   };
+
+  saveHBLShipmentRecord = async(data:any):Promise<void>=>{
+
+    this.dispatch({
+      type: MBL_SHIPMENTS.SAVE_HBL_SHIPMENT,
+      payload: data,
+    });
+
+  }
 }

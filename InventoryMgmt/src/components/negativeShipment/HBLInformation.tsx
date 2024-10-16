@@ -1,6 +1,8 @@
 
 import './filterabletable.css'
+import { useSelector, useDispatch } from "react-redux";
 import CustomSelect from "../common/select/custom-select/custom-select";
+import { MBLShipmentDispatcher } from "../../redux/actions/newShipments/mblShipment";
 import {
   DeliveryToPier,
   stateOptions,
@@ -29,7 +31,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
 
 
-function HBLInformation() {
+function HBLInformation(props: any) {
+  const dispatch = useDispatch()
   interface HBLResponseModel {
     operationType?: any;
     fileNo?: any;
@@ -119,6 +122,9 @@ function HBLInformation() {
   const [salesType, setSalesType] = useState(formData.salesType)
   const [quotationNo, setquotationNo] = useState(formData.quotationNo)
 
+  const PanelsDispatch = new MBLShipmentDispatcher(dispatch);
+  const MblShipment = useSelector((state: any) => state.MblShipment);
+  //console.log("sjsjsj",MblShipment[0]['hblData'])
 
   const handleChange = (event: any) => {
     console.log("event.name", event.name)
@@ -132,14 +138,16 @@ function HBLInformation() {
     formData.eta = ETA;
     formData.earlyReturnDate = EarlyReturnDate;
     formData.lcIssueDate = LCIssueDate;
-    formData.cargoReadyDate = CargoReadyDate;    
+    formData.cargoReadyDate = CargoReadyDate;
     formData.onBoard = onboard;
     formData.blCancelled = BLCancelled;
     formData.placeOfDeliveryETA = PlaceofDeliveryETA;
     formData.placeOfReceiptETD = PiaceofReceiptETD;
     formData.cutOffDate = WHCuttOfDate;
-   
+
     console.log("fhfhf", formData)
+    PanelsDispatch.saveHBLShipmentRecord(formData)
+    props.updateAccordian('collapseOne')
   };
 
   return (

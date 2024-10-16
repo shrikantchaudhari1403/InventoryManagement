@@ -1,17 +1,19 @@
 
 import './filterabletable.css'
-import CustomSelect from "../common/select/custom-select/custom-select";
-import { stateOptions } from "../common/select/custom-select/data";
-import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css";
+import { useSelector } from "react-redux";
 import { useState } from 'react';
 import MblInformation from "./MblInformation"
 import HBLInformation from "./HBLInformation"
-
+import ContainerItems from "./ContainerItems"
 function NewShipments() {
   const [activeTabId, setActiveTabId] = useState('tabs-1')
   const [activeAccordian, setActiveAccordian] = useState('collapseOne')
+  const MblShipment = useSelector((state: any) => state.MblShipment);
 
+  const updateAccordian =(value:any)=>{
+    setActiveAccordian(value)
+  }
 
   return (<div style={{ margin: '45px 0px 0px 45px' }}>
     <div className="top-header tp-header">
@@ -70,7 +72,7 @@ function NewShipments() {
                   </div>
                   <div id="collapseTwo" className={activeAccordian == 'collapseTwo' ? "accordion-collapse collapse show" : "accordion-collapse collapse"} aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                      <HBLInformation/>
+                      <HBLInformation updateAccordian={updateAccordian}/>
                     </div>
                     <div className='accordion-footer'>
 
@@ -94,16 +96,42 @@ function NewShipments() {
             </div>
             <div className='col-md-2 col-sm-2 p-0'>
               <div className='add-hbl-button' onClick={() => { setActiveAccordian('collapseTwo') }}>+ Add HB/L</div>
+              {MblShipment.hblData.length > 0 ?<>
+              <div className='hbl-card'>
+                {MblShipment.hblData.map((item:any)=>{return<div className='hbl-text'>{item.HBLno}</div>
+                })}
+               </div>
+               <div className='add-hbl-button bg-blue'>
+
+               </div>
+               </>:<></>}
             </div>
           </div>
 
         </div>
         <div className={activeTabId == "tabs-2" ? "tab-pane  active" : "tab-pane p-3"} id="tabs-2" role="tabpanel">
-          <div className="accordion-header">
-          <div className='form-header-title'>MB/L</div>
-          </div>
-          <div className='accordion-body'>
-              <div style={{height:'100px',width:'100%'}}></div>
+        <div className='row'>
+            <div className='col-md-10 col-sm-2 p-0'>
+              <div className="accordion" id="accordionExample">
+                <div className="accordion-item mt-2 accordion-container">
+                  <div className={"accordion-header"} id="headingOne" onClick={() => { setActiveAccordian('collapseOne') }}>
+                    <div className='form-header-title'>MB/L Information</div>
+                    <div>
+                      {  <img className="accordion-arrow-left" src="../../../src/assets/left-arrow.svg" />}
+                    </div>
+
+                  </div>
+                  <div id="collapseOne" className={ "accordion-collapse collapse show"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <ContainerItems></ContainerItems>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div className='col-md-2 col-sm-2 p-0'>
+              <div className='add-hbl-button' onClick={() => { setActiveAccordian('collapseTwo') }}>+ Add HB/L</div>
+            </div>
           </div>
         </div>
         <div className={activeTabId == "tabs-3" ? "tab-pane  active" : "tab-pane p-3"} id="tabs-3" role="tabpanel">

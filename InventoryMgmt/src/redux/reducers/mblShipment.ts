@@ -1,4 +1,4 @@
-import { MBL_SHIPMENTS, SHIPMENTS } from "../types/index";
+import { MBL_SHIPMENTS,HBL_SHIPMENTS, SHIPMENTS } from "../types/index";
 import { Action, Reducer } from "redux";
 import {
   IShipment,
@@ -7,23 +7,28 @@ import {
 import { IHBLShipment } from "../interfaces/IHBLShipment";
 import { IMBLShipment } from "../interfaces/IMBLShipment";
 
-const hblDataModel: IHBLShipment[] = [{}];
 
-const initialState: IMBLShipment[] = [
-  {
-    hblData: hblDataModel,
-  },
-];
+
+
+const initialState:IMBLShipment =
+{
+  fileNo:"",
+  hblData:[]
+};
 
 export interface IDispatchAction extends Action<MBL_SHIPMENTS> {
   payload: IMBLShipment;
 }
 
-export const MblShipment: Reducer<IMBLShipment[], IDispatchAction> = (
+export const MblShipment: Reducer<any, IDispatchAction> = (
   state = initialState,
   action
 ) => {
-  switch (action.type) {
+  switch (action.type)
+  {
+    case MBL_SHIPMENTS.SAVE_HBL_SHIPMENT:
+      return{...state ,hblData: [...state.hblData,action?.payload]
+    };
     case MBL_SHIPMENTS.GET_ALL_MBL_SHIPMENTS:
       return { ...state, data: action.payload };
     case MBL_SHIPMENTS.GET_ALL_MBL_SHIPMENTS_DATA:
