@@ -461,7 +461,43 @@
   font-size: 12px !important;
   background-color: #F8F8F8;
 }
+.total-inp{
+  text-align: center;
+  font-size: 12px;
+  color: #337ab7;
+}
+.total-input{
+  text-align: center;
+  font-size: 12px;
+}
+.f-11{
+  font-size: 11px;
+}
+.ml2{
+  margin-left: 2px;
+}
+.mr2{
+  margin-right: 2px;
+}
+.display-unit {
+  width: 200px;
+  margin-left: 5px;
+  border: azure;
+  font-size: 10px;
+}
 
+.textright{
+  text-align: end;
+}
+.fwb{
+  font-weight: bold;
+}
+
+.form-select {
+  border-radius: 0rem !important;
+  height: 23px !important;
+  font-size: 6px !important;
+}
 .nav-tabs {
   border-bottom: 0px solid #dee2e6;
 }

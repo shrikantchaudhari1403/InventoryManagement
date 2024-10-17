@@ -36,13 +36,13 @@ function NewShipments() {
           <a className={activeTabId == "tabs-3" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-3" role="tab">Accounting</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-4') }}>
-          <a className={activeTabId == "tabs-4" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-1" role="tab">Doc Center</a>
+          <a className={activeTabId == "tabs-4" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-4" role="tab">Doc Center</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-5') }}>
-          <a className={activeTabId == "tabs-5" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-2" role="tab">Work Order</a>
+          <a className={activeTabId == "tabs-5" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-5" role="tab">Work Order</a>
         </li>
         <li className="nav-item" onClick={() => { setActiveTabId('tabs-6') }}>
-          <a className={activeTabId == "tabs-6" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-2" role="tab">Status</a>
+          <a className={activeTabId == "tabs-6" ? "nav-link active" : "nav-link"} data-toggle="tab" href="#tabs-6" role="tab">Status</a>
         </li>
       </ul>
       <div className="tab-content">
