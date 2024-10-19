@@ -299,7 +299,7 @@
 }
 
 .container-create-btn {
-  width: 161px !important;
+  width: auto !important;
   cursor: pointer !important;
 }
 
@@ -390,7 +390,15 @@
   border: 1px solid gray;
 }
 
-
+.accounting-container{
+  margin: 5px 5px 5px 20px;
+}
+.accounting-grey-btn{
+  height: 30px;
+    background-color: grey;
+    color: #FFFFFF;
+    padding: 5px 5px 5px 15px;
+}
 
 .form-header-title {
   color: #ffff;
@@ -475,6 +483,10 @@
 }
 .ml2{
   margin-left: 2px;
+}
+.accounting-container {
+  margin: 1px 5px 0px 20px;
+
 }
 .mr2{
   margin-right: 2px;

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import MblInformation from "./MblInformation"
 import HBLInformation from "./HBLInformation"
 import ContainerItems from "./ContainerItems"
+import Accouting from "./Accouting"
 function NewShipments() {
   const [activeTabId, setActiveTabId] = useState('tabs-1')
   const [activeAccordian, setActiveAccordian] = useState('collapseOne')
@@ -135,7 +136,29 @@ function NewShipments() {
           </div>
         </div>
         <div className={activeTabId == "tabs-3" ? "tab-pane  active" : "tab-pane p-3"} id="tabs-3" role="tabpanel">
-          <div className="accordion-header"></div>
+        <div className='row'>
+            <div className='col-md-10 col-sm-2 p-0'>
+              <div className="accordion" id="accordionExample">
+                <div className="accordion-item mt-2 accordion-container">
+                  <div className={"accordion-header"} id="headingOne" onClick={() => { setActiveAccordian('collapseOne') }}>
+                    <div className='form-header-title'>MB/L Information</div>
+                    <div>
+                      {  <img className="accordion-arrow-left" src="../../../src/assets/left-arrow.svg" />}
+                    </div>
+
+                  </div>
+                  <div id="collapseOne" className={ "accordion-collapse collapse show"} aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <Accouting/>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div className='col-md-2 col-sm-2 p-0'>
+              <div className='add-hbl-button' onClick={() => { setActiveAccordian('collapseTwo') }}>+ Add HB/L</div>
+            </div>
+          </div>
         </div>
         <div className={activeTabId == "tabs-4" ? "tab-pane  active" : "tab-pane p-3"} id="tabs-3" role="tabpanel">
           <div className="accordion-header"></div>
